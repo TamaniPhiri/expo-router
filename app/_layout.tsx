@@ -67,7 +67,7 @@ function RootLayoutNav() {
           name="listing/[id]"
           options={{
             presentation: "modal",
-            title: "Listing",
+            title: "",
             headerTitleStyle: { fontFamily: "mon-sb" },
           }}
         />
