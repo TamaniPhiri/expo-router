@@ -28,7 +28,7 @@ const Layout = () => {
           tabBarLabel: "Wishlists",
           title: "Wishlists",
           tabBarIcon: ({ color, size }) => (
-            <AntDesign name="heart" size={size} color={color} />
+            <AntDesign name="hearto" size={size} color={color} />
           ),
         }}
       />
