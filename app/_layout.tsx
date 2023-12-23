@@ -57,7 +57,11 @@ function RootLayoutNav() {
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen
           name="(modals)/login"
-          options={{ presentation: "modal" ,title:"Log in or Sign up"}}
+          options={{
+            presentation: "modal",
+            title: "Log in or Sign up",
+            headerTitleStyle: { fontFamily: "mon-sb" },
+          }}
         />
       </Stack>
     </ThemeProvider>
