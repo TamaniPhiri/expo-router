@@ -71,7 +71,13 @@ function RootLayoutNav() {
             title: "Booking",
           }}
         />
-        <Stack.Screen name="(modals)/booking" options={{}} />
+        <Stack.Screen
+          name="(modals)/booking"
+          options={{
+            title: "Booking",
+            headerTitleStyle: { fontFamily: "mon-sb" },
+          }}
+        />
       </Stack>
     </ThemeProvider>
   );
