@@ -6,7 +6,7 @@ const Layout = () => {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors.orange,
+        tabBarActiveTintColor: Colors.yellow,
         tabBarLabelStyle: {
           fontFamily: "mon-sb",
         },
