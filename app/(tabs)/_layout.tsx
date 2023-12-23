@@ -1,6 +1,6 @@
 import { Tabs } from "expo-router";
 import Colors from "../../constants/Colors";
-import { AntDesign } from "@expo/vector-icons";
+import { AntDesign,FontAwesome5 } from "@expo/vector-icons";
 
 const Layout = () => {
   return (
@@ -29,6 +29,16 @@ const Layout = () => {
           title: "Wishlists",
           tabBarIcon: ({ color, size }) => (
             <AntDesign name="hearto" size={size} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="trips"
+        options={{
+          tabBarLabel: "Trips",
+          title: "Trips",
+          tabBarIcon: ({ color, size }) => (
+            <FontAwesome5 name="airbnb" size={size} color={color} />
           ),
         }}
       />
