@@ -1,6 +1,6 @@
 import { Tabs } from "expo-router";
 import Colors from "../../constants/Colors";
-import { AntDesign,FontAwesome5,Ionicons } from "@expo/vector-icons";
+import { AntDesign, FontAwesome5, Ionicons } from "@expo/vector-icons";
 
 const Layout = () => {
   return (
@@ -48,7 +48,17 @@ const Layout = () => {
           tabBarLabel: "Inbox",
           title: "Inbox",
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="chatbubble-outline" size={size} color={color}/>
+            <Ionicons name="chatbubble-outline" size={size} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="profile"
+        options={{
+          tabBarLabel: "Profile",
+          title: "Profile",
+          tabBarIcon: ({ color, size }) => (
+            <AntDesign name="user" size={size} color={color} />
           ),
         }}
       />
