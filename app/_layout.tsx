@@ -66,11 +66,12 @@ function RootLayoutNav() {
         <Stack.Screen
           name="listing/[id]"
           options={{
-            presentation: "modal",
+            presentation: "transparentModal",
+            animation: "fade",
             title: "",
-            headerTitleStyle: { fontFamily: "mon-sb" },
           }}
         />
+        <Stack.Screen name="(modals)/booking" options={{}} />
       </Stack>
     </ThemeProvider>
   );
