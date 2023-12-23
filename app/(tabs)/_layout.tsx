@@ -4,7 +4,10 @@ import Colors from "../../constants/Colors";
 const Layout = () => {
   return (
     <Tabs screenOptions={{ tabBarActiveTintColor: Colors.yellow }}>
-      <Tabs.Screen name="index" options={{ tabBarLabel: "Explore" }} />
+      <Tabs.Screen
+        name="index"
+        options={{ tabBarLabel: "Explore", title: "Explore" }}
+      />
     </Tabs>
   );
 };
