@@ -56,8 +56,8 @@ function RootLayoutNav() {
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen
-          name="(modals)/login.tsx"
-          options={{ presentation: "modal" ,title:"Login"}}
+          name="(modals)/login"
+          options={{ presentation: "modal" ,title:"Log in or Sign up"}}
         />
       </Stack>
     </ThemeProvider>
