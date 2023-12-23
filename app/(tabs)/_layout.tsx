@@ -3,7 +3,9 @@ import Colors from "../../constants/Colors";
 
 const Layout = () => {
   return (
-    <Tabs screenOptions={{ tabBarActiveTintColor: Colors.yellow }}>
+    <Tabs screenOptions={{ tabBarActiveTintColor: Colors.yellow ,tabBarLabelStyle:{
+      fontFamily:"mon-sb"
+    }}}>
       <Tabs.Screen
         name="index"
         options={{ tabBarLabel: "Explore", title: "Explore" }}
