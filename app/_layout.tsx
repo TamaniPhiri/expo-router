@@ -63,6 +63,14 @@ function RootLayoutNav() {
             headerTitleStyle: { fontFamily: "mon-sb" },
           }}
         />
+        <Stack.Screen
+          name="listing/[id]"
+          options={{
+            presentation: "modal",
+            title: "Listing",
+            headerTitleStyle: { fontFamily: "mon-sb" },
+          }}
+        />
       </Stack>
     </ThemeProvider>
   );
