@@ -4,7 +4,7 @@ import {} from "react-native-gesture-handler";
 
 const Page = () => {
   return (
-    <View style={{ paddingHorizontal: 10 }}>
+    <View className="bg3" style={{ paddingHorizontal: 10 }}>
       <TextInput style={styles.input} />
     </View>
   );
