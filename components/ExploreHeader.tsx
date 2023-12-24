@@ -45,7 +45,7 @@ const ExploreHeader = () => {
     const selected = itemsRef.current[index];
     setActiveIndex(index);
     selected?.measure((x) => {
-      scrollRef.current?.scrollTo({ x: x, y: 0, animated: true });
+      scrollRef.current?.scrollTo({ x: x - 16, y: 0, animated: true });
     });
   };
   return (
