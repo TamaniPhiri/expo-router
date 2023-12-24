@@ -10,10 +10,19 @@ import {} from "react-native-gesture-handler";
 
 const Page = () => {
   return (
-    <View style={{ paddingHorizontal: 10 ,flexDirection:"column",gap:12}}>
+    <View style={{ paddingHorizontal: 10, flexDirection: "column", gap: 12 }}>
       <TextInput style={styles.input} />
       <TouchableOpacity style={styles.button}>
-        <Text style={{ color: "white", textAlign: "center" ,fontSize:20,fontFamily:"mon-sb"}}>Continue</Text>
+        <Text
+          style={{
+            color: "white",
+            textAlign: "center",
+            fontSize: 18,
+            fontFamily: "mon-sb",
+          }}
+        >
+          Continue
+        </Text>
       </TouchableOpacity>
     </View>
   );
