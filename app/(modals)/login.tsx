@@ -20,7 +20,7 @@ const Page = () => {
       </TouchableOpacity>
       <View style={styles.dividerContainer}>
         <View style={styles.seperator}></View>
-        <Text style={{ color: "white" }}>Or</Text>
+        <Text style={styles.regularText}>Or</Text>
         <View style={styles.seperator}></View>
       </View>
     </View>
@@ -63,5 +63,9 @@ const styles = StyleSheet.create({
     borderBottomWidth: 0.5,
     flex: 1,
     borderColor: Colors.mid,
+  },
+  regularText: {
+    color: "white",
+    fontFamily: "mon",
   },
 });
