@@ -57,7 +57,9 @@ const Listings = ({ listings, category }: Props) => {
             </Text>
           </View>
         </View>
-        <Text style={{ fontFamily: "mon", color: "#e5e5e5" }}>
+        <Text
+          style={{ fontFamily: "mon", color: "#e5e5e5", paddingVertical: 3 }}
+        >
           {item.room_type}
         </Text>
         <View style={{ flexDirection: "row", alignItems: "center", gap: 6 }}>
