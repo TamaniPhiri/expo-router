@@ -9,7 +9,7 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 import Colors from "../constants/Colors";
 import { Link } from "expo-router";
-import { Ionicons } from "@expo/vector-icons";
+import { Ionicons, MaterialIcons } from "@expo/vector-icons";
 import { StatusBar } from "expo-status-bar";
 
 const categories = [
@@ -70,9 +70,13 @@ const ExploreHeader = () => {
             <Ionicons name="options-outline" size={24} color={"white"} />
           </TouchableOpacity>
         </View>
-        <ScrollView horizontal>
+        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
           {categories.map((item, i) => (
-            <TouchableOpacity key={i}>
+            <TouchableOpacity
+              key={i}
+              style={{ flexDirection: "row", alignItems: "center" }}
+            >
+              <MaterialIcons name={item.icon as any} color={"white"} />
               <Text style={styles.whiteText}>{item.name}</Text>
             </TouchableOpacity>
           ))}
