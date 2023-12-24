@@ -39,7 +39,7 @@ const ExploreHeader = () => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View style={styles.container}>
-        <View style={{ flexDirection: "row", alignItems: "center" }}>
+        <View style={styles.filterContainer}>
           <Link style={{ color: "white" }} href={"/(modals)/booking"}>
             Booking
           </Link>
@@ -59,6 +59,7 @@ const styles = StyleSheet.create({
     height: 130,
     backgroundColor: "#262626",
   },
+  filterContainer: { flexDirection: "row", alignItems: "center" },
   filterButton: {
     borderWidth: 1,
     borderColor: "white",
