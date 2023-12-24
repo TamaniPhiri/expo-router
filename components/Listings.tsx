@@ -54,6 +54,7 @@ const styles = StyleSheet.create({
   cardImage: {
     width: "100%",
     height: 300,
+    borderRadius: 10,
   },
   card: {
     padding: 16,
