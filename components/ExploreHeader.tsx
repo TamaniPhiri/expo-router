@@ -36,8 +36,8 @@ const categories = [
 
 const ExploreHeader = () => {
   return (
-    <SafeAreaView style={{}}>
-      <View style={{}}>
+    <SafeAreaView style={{ flex: 1 }}>
+      <View style={{ height: 130 }}>
         <View style={{ flexDirection: "row", alignItems: "center" }}>
           <Link style={{ color: "white" }} href={"/(modals)/booking"}>
             Booking
