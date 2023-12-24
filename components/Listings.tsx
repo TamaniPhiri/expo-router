@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { View, Text } from "react-native";
 interface Props {
   listings: any;
@@ -5,6 +6,9 @@ interface Props {
 }
 
 const Listings = ({ listings, category }: Props) => {
+  useEffect(() => {
+    console.log("reload listings");
+  }, [category]);
   return (
     <View>
       <Text>Listings</Text>
