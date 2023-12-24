@@ -78,6 +78,7 @@ const ExploreHeader = () => {
           {categories.map((item, i) => (
             <TouchableOpacity
               key={i}
+              onPress={() => setActiveIndex(i)}
               ref={(el) => (itemsRef.current[i] = el)}
               style={
                 activeIndex === i
@@ -87,10 +88,18 @@ const ExploreHeader = () => {
             >
               <MaterialIcons
                 name={item.icon as any}
-                color={"white"}
+                color={activeIndex === i ? "#e5e5e5" : "#a3a3a3"}
                 size={20}
               />
-              <Text style={styles.categoryText}>{item.name}</Text>
+              <Text
+                style={
+                  activeIndex === i
+                    ? styles.categoryTextActive
+                    : styles.categoryText
+                }
+              >
+                {item.name}
+              </Text>
             </TouchableOpacity>
           ))}
         </ScrollView>
@@ -136,7 +145,7 @@ const styles = StyleSheet.create({
     borderRadius: 24,
   },
   categoryText: {
-    color: "#d4d4d4",
+    color: "#a3a3a3",
     fontFamily: "mon-sb",
   },
   categoryTextActive: {
