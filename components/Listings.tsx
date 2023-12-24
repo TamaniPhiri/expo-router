@@ -29,7 +29,7 @@ const Listings = ({ listings, category }: Props) => {
     <Link href={`/listing/${item.id}`}>
       <TouchableOpacity>
         <View>
-          <Image source={{ uri: item.medium_url }} width={100} height={100} />
+          <Image source={{ uri: item.medium_url }} style={styles.cardImage} />
         </View>
       </TouchableOpacity>
     </Link>
@@ -50,5 +50,9 @@ export default Listings;
 const styles = StyleSheet.create({
   container: {
     marginTop: 135,
+  },
+  cardImage: {
+    width: "100%",
+    height: 300,
   },
 });
