@@ -57,10 +57,11 @@ const styles = StyleSheet.create({
   dividerContainer: {
     flexDirection: "row",
     alignItems: "center",
-    gap:8
+    gap: 8,
   },
   seperator: {
-    borderBottomWidth: 1,
-    flex:1
+    borderBottomWidth: 0.5,
+    flex: 1,
+    borderColor: Colors.mid,
   },
 });
