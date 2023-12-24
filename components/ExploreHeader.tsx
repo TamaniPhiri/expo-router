@@ -4,7 +4,7 @@ import { Link } from "expo-router";
 import { Ionicons, MaterialIcons } from "@expo/vector-icons";
 import { StatusBar } from "expo-status-bar";
 import { ScrollView } from "react-native-gesture-handler";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 const categories = [
   {
@@ -39,6 +39,7 @@ const categories = [
 
 const ExploreHeader = () => {
   const itemsRef = useRef<Array<TouchableOpacity>>([]);
+  const [activeIndex, setActiveIndex] = useState<number>(0);
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <StatusBar style="light" backgroundColor="#262626" />
@@ -84,7 +85,7 @@ const ExploreHeader = () => {
                 color={"white"}
                 size={20}
               />
-              <Text style={styles.whiteText}>{item.name}</Text>
+              <Text style={styles.categoryText}>{item.name}</Text>
             </TouchableOpacity>
           ))}
         </ScrollView>
@@ -128,5 +129,8 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 8,
     borderRadius: 24,
+  },
+  categoryText: {
+    color: "#a3a3a3",
   },
 });
