@@ -2,6 +2,7 @@ import { View, Text } from "react-native";
 import React from "react";
 import { Stack } from "expo-router";
 import ExploreHeader from "../../components/ExploreHeader";
+import Listings from "../../components/Listings";
 
 const Page = () => {
   return (
@@ -11,6 +12,7 @@ const Page = () => {
           header: () => <ExploreHeader />,
         }}
       />
+      <Listings />
     </View>
   );
 };

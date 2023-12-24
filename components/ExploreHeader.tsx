@@ -37,6 +37,10 @@ const categories = [
   },
 ];
 
+interface Props {
+  onCategoryChange: (category: string) => void;
+}
+
 const ExploreHeader = () => {
   const itemsRef = useRef<Array<TouchableOpacity | null>>([]);
   const [activeIndex, setActiveIndex] = useState<number>(0);
