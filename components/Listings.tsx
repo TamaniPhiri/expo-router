@@ -1,5 +1,6 @@
+import { Link } from "expo-router";
 import { useEffect, useRef, useState } from "react";
-import { View, Text, StyleSheet, FlatList } from "react-native";
+import { View, Text, StyleSheet, FlatList, ListRenderItem } from "react-native";
 interface Props {
   listings: any;
   category: string;
@@ -15,9 +16,17 @@ const Listings = ({ listings, category }: Props) => {
       setLoading(false);
     }, 300);
   }, [category]);
+
+  const renderRow: ListRenderItem<any> = ({ item }) => (
+    <Link href={`/listing/${item.id}`}></Link>
+  );
   return (
     <View style={styles.container}>
-      <FlatList data={loading ? [] : listings} />
+      <FlatList
+        ref={listRef}
+        data={loading ? [] : listings}
+        renderItem={renderRow}
+      />
     </View>
   );
 };
