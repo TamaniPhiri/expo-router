@@ -18,7 +18,7 @@ const Listings = ({ listings, category }: Props) => {
   }, [category]);
 
   const renderRow: ListRenderItem<any> = ({ item }) => (
-    <Link href={`/listing/${item.id}`}></Link>
+    <Link href={`/listing/${item.id}`}>Go there</Link>
   );
   return (
     <View style={styles.container}>
