@@ -21,6 +21,14 @@ const tokenCache = {
       return null;
     }
   },
+  async saveToken(key: string, value: string) {
+    try {
+      return SecureStore.setItemAsync(key, value);
+    } catch (error) {
+      console.log(error);
+      return null;
+    }
+  },
 };
 
 export {
