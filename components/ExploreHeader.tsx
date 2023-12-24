@@ -3,12 +3,12 @@ import {
   Text,
   TouchableOpacity,
   StyleSheet,
-  ScrollView,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Link } from "expo-router";
 import { Ionicons, MaterialIcons } from "@expo/vector-icons";
 import { StatusBar } from "expo-status-bar";
+import { ScrollView } from "react-native-gesture-handler";
 
 const categories = [
   {
@@ -73,16 +73,20 @@ const ExploreHeader = () => {
           showsHorizontalScrollIndicator={false}
           contentContainerStyle={{
             alignItems: "center",
-            gap: 20,
-            paddingHorizontal: 16,
+            gap: 24,
+            flexGrow: 1,
           }}
         >
           {categories.map((item, i) => (
             <TouchableOpacity
               key={i}
-              style={{ flexDirection: "row", alignItems: "center" }}
+              style={{ flexDirection: "row", alignItems: "center", gap: 6 }}
             >
-              <MaterialIcons name={item.icon as any} color={"white"} />
+              <MaterialIcons
+                name={item.icon as any}
+                color={"white"}
+                size={24}
+              />
               <Text style={styles.whiteText}>{item.name}</Text>
             </TouchableOpacity>
           ))}
