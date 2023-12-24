@@ -6,7 +6,6 @@ import {
   TouchableOpacity,
 } from "react-native";
 import Colors from "../../constants/Colors";
-import {} from "react-native-gesture-handler";
 
 const Page = () => {
   return (
