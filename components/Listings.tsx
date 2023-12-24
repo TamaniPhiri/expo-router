@@ -43,6 +43,7 @@ const Listings = ({ listings, category }: Props) => {
             alignItems: "center",
             justifyContent: "space-between",
             paddingTop: 6,
+            gap: 12,
           }}
         >
           <Text style={{ color: "white", fontFamily: "mon" }}>{item.name}</Text>
