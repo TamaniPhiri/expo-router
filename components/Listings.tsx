@@ -1,6 +1,14 @@
 import { Link } from "expo-router";
 import { useEffect, useRef, useState } from "react";
-import { View, Text, StyleSheet, FlatList, ListRenderItem } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  FlatList,
+  ListRenderItem,
+  TouchableOpacity,
+  Image,
+} from "react-native";
 interface Props {
   listings: any;
   category: string;
@@ -17,8 +25,14 @@ const Listings = ({ listings, category }: Props) => {
     }, 300);
   }, [category]);
 
-  const renderRow: ListRenderItem<any> = ({ item }) => (
-    <Link href={`/listing/${item.id}`}>Go there</Link>
+  const renderRow: ListRenderItem<AirbnbListing> = ({ item }) => (
+    <Link href={`/listing/${item.id}`}>
+      <TouchableOpacity>
+        <View>
+          <Image source={{ uri: item.medium_url }} />
+        </View>
+      </TouchableOpacity>
+    </Link>
   );
   return (
     <View style={styles.container}>
