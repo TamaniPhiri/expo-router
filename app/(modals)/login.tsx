@@ -25,7 +25,7 @@ const Page = () => {
         <View style={styles.seperator}></View>
       </View>
       <TouchableOpacity style={styles.outlineButton}>
-        <Ionicons name="md-logo-google" />
+        <Ionicons name="md-logo-google" size={24} color={Colors.mid} />
         <Text style={styles.buttonText}>Continue with Google</Text>
       </TouchableOpacity>
     </View>
@@ -82,6 +82,7 @@ const styles = StyleSheet.create({
     fontFamily: "mon",
     flexDirection: "row",
     alignItems: "center",
-    justifyContent:"center"
+    justifyContent:"center",
+    gap:16
   },
 });
