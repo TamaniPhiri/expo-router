@@ -13,7 +13,7 @@ const Page = () => {
     <View style={{ paddingHorizontal: 10 ,flexDirection:"column",gap:12}}>
       <TextInput style={styles.input} />
       <TouchableOpacity style={styles.button}>
-        <Text style={{ color: "white", textAlign: "center" }}>Continue</Text>
+        <Text style={{ color: "white", textAlign: "center" ,fontSize:20,fontFamily:"mon-sb"}}>Continue</Text>
       </TouchableOpacity>
     </View>
   );
