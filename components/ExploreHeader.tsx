@@ -38,16 +38,8 @@ const categories = [
 ];
 
 const ExploreHeader = () => {
-  const scrollRef = useRef<ScrollView>(null);
   const itemsRef = useRef<Array<TouchableOpacity | null>>([]);
   const [activeIndex, setActiveIndex] = useState<number>(0);
-  const selectCategory = (index: number) => {
-    const selected = itemsRef.current[index];
-    setActiveIndex(index);
-    selected?.measure((x) => {
-      scrollRef.current?.scrollTo({ x: x - 16, y: 0, animated: true });
-    });
-  };
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <StatusBar style="light" backgroundColor="#262626" />
@@ -75,7 +67,6 @@ const ExploreHeader = () => {
           </TouchableOpacity>
         </View>
         <ScrollView
-          ref={scrollRef}
           horizontal
           showsHorizontalScrollIndicator={false}
           contentContainerStyle={{
@@ -87,7 +78,7 @@ const ExploreHeader = () => {
           {categories.map((item, i) => (
             <TouchableOpacity
               key={i}
-              onPress={() => selectCategory(i)}
+              onPress={() => setActiveIndex(i)}
               ref={(el) => (itemsRef.current[i] = el)}
               style={
                 activeIndex === i
