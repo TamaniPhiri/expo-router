@@ -60,7 +60,7 @@ const ExploreHeader = () => {
                   Where to?
                 </Text>
                 <Text style={[styles.whiteText, { fontFamily: "mon" }]}>
-                  Anywhere - Any Week
+                  Anywhere - Any Week - Add Guests
                 </Text>
               </View>
             </TouchableOpacity>
