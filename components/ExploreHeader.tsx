@@ -49,10 +49,11 @@ const ExploreHeader = () => {
           <Link style={styles.searchInput} href={"/(modals)/booking"} asChild>
             <TouchableOpacity
               style={{
-                borderColor: Colors.mid,
+                borderColor: "white",
                 borderWidth: 0.5,
                 flex: 1,
                 padding: 8,
+                borderRadius:24
               }}
             >
               <Ionicons name="search" size={24} color="white" />
