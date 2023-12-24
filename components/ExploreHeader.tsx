@@ -59,7 +59,7 @@ const ExploreHeader = () => {
                 <Text style={[styles.whiteText, { fontFamily: "mon-b" }]}>
                   Where to?
                 </Text>
-                <Text style={[styles.whiteText, { fontFamily: "mon" }]}>
+                <Text style={{ fontFamily: "mon", color: "#a3a3a3" }}>
                   Anywhere - Any week - Add guests
                 </Text>
               </View>
