@@ -34,7 +34,7 @@ const categories = [
 
 const ExploreHeader = () => {
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{ flex: 1 }}>
       <Text style={{ color: "white" }}>ExploreHeader</Text>
     </SafeAreaView>
   );
