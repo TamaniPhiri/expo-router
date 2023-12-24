@@ -2,6 +2,7 @@ import { View, Text, TouchableOpacity } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Colors from "../constants/Colors";
 import { Link } from "expo-router";
+import { Ionicons } from "@expo/vector-icons";
 
 const categories = [
   {
@@ -37,13 +38,13 @@ const categories = [
 const ExploreHeader = () => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <View style={{ height: 130 }}>
+      <View style={{ height: 130, backgroundColor: "gray" }}>
         <View style={{ flexDirection: "row", alignItems: "center" }}>
           <Link style={{ color: "white" }} href={"/(modals)/booking"}>
             Booking
           </Link>
           <TouchableOpacity>
-            <Text style={{ color: "white" }}>Filters</Text>
+            <Ionicons name="options-outline" />
           </TouchableOpacity>
         </View>
       </View>
