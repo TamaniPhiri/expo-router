@@ -41,6 +41,13 @@ const ExploreHeader = () => {
   const scrollRef = useRef<ScrollView>(null);
   const itemsRef = useRef<Array<TouchableOpacity | null>>([]);
   const [activeIndex, setActiveIndex] = useState<number>(0);
+  const selectCategory = (index: number) => {
+    const selected = itemsRef.current[index];
+    setActiveIndex(index);
+    selected?.measure((x) => {
+      scrollRef.current?.scrollTo(x);
+    });
+  };
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <StatusBar style="light" backgroundColor="#262626" />
