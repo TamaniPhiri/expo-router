@@ -76,7 +76,15 @@ const ExploreHeader = () => {
           }}
         >
           {categories.map((item, i) => (
-            <TouchableOpacity key={i} ref={(el) => (itemsRef.current[i] = el)}>
+            <TouchableOpacity
+              key={i}
+              ref={(el) => (itemsRef.current[i] = el)}
+              style={
+                activeIndex === i
+                  ? styles.categoryTextActive
+                  : styles.categoryText
+              }
+            >
               <MaterialIcons
                 name={item.icon as any}
                 color={"white"}
