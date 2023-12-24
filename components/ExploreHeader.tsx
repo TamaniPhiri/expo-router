@@ -38,7 +38,7 @@ const categories = [
 ];
 
 const ExploreHeader = () => {
-  const itemsRef = useRef<Array<TouchableOpacity>>([]);
+  const itemsRef = useRef<Array<TouchableOpacity | null>>([]);
   const [activeIndex, setActiveIndex] = useState<number>(0);
   return (
     <SafeAreaView style={{ flex: 1 }}>
@@ -76,10 +76,7 @@ const ExploreHeader = () => {
           }}
         >
           {categories.map((item, i) => (
-            <TouchableOpacity
-              key={i}
-              style={{ flexDirection: "column", alignItems: "center", gap: 6 }}
-            >
+            <TouchableOpacity key={i} ref={(el) => (itemsRef.current[i] = el)}>
               <MaterialIcons
                 name={item.icon as any}
                 color={"white"}
@@ -137,5 +134,7 @@ const styles = StyleSheet.create({
   categoryTextActive: {
     color: "#e5e5e5",
     fontFamily: "mon-sb",
+    borderBottomColor: "white",
+    borderBottomWidth: 2,
   },
 });
