@@ -16,7 +16,7 @@ const Page = () => {
           header: () => <ExploreHeader onCategoryChange={onDataChanged} />,
         }}
       />
-      <Listings category={category} />
+      <Listings listings={[]} category={category} />
     </View>
   );
 };
