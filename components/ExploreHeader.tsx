@@ -1,4 +1,10 @@
-import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  StyleSheet,
+  TextInput,
+} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Colors from "../constants/Colors";
 import { Link } from "expo-router";
@@ -40,8 +46,11 @@ const ExploreHeader = () => {
     <SafeAreaView style={{ flex: 1 }}>
       <View style={styles.container}>
         <View style={styles.filterContainer}>
-          <Link style={{ color: "white" }} href={"/(modals)/booking"}>
-            Booking
+          <Link style={{ color: "white" }} href={"/(modals)/booking"} asChild>
+            <TouchableOpacity>
+              <Ionicons name="search" size={24} />
+              <TextInput style={{ flex: 1 }} />
+            </TouchableOpacity>
           </Link>
           <TouchableOpacity style={styles.filterButton}>
             <Ionicons name="options-outline" size={24} color={"white"} />
@@ -58,7 +67,7 @@ const styles = StyleSheet.create({
   container: {
     height: 130,
     backgroundColor: "#262626",
-    paddingHorizontal:10
+    paddingHorizontal: 10,
   },
   filterContainer: {
     flexDirection: "row",
@@ -71,4 +80,5 @@ const styles = StyleSheet.create({
     padding: 8,
     borderRadius: 24,
   },
+  searchInput: {},
 });
