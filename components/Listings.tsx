@@ -26,9 +26,9 @@ const Listings = ({ listings, category }: Props) => {
   }, [category]);
 
   const renderRow: ListRenderItem<AirbnbListing> = ({ item }) => (
-    <Link href={`/listing/${item.id}`}>
+    <Link href={`/listing/${item.id}`} asChild>
       <TouchableOpacity>
-        <View>
+        <View style={styles.card}>
           <Image source={{ uri: item.medium_url }} style={styles.cardImage} />
         </View>
       </TouchableOpacity>
@@ -54,5 +54,8 @@ const styles = StyleSheet.create({
   cardImage: {
     width: "100%",
     height: 300,
+  },
+  card: {
+    padding: 16,
   },
 });
