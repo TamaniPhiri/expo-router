@@ -155,14 +155,14 @@ const styles = StyleSheet.create({
   categoryBtn: {
     flexDirection: "column",
     alignItems: "center",
-    gap: 6,
+    gap: 4,
     paddingBottom: 8,
     marginTop: 12,
   },
   categoryBtnActive: {
     flexDirection: "column",
     alignItems: "center",
-    gap: 6,
+    gap: 4,
     paddingBottom: 8,
     marginTop: 12,
     borderBottomWidth: 2,
