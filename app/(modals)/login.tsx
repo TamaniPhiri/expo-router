@@ -57,6 +57,7 @@ const styles = StyleSheet.create({
   dividerContainer: {
     flexDirection: "row",
     alignItems: "center",
+    gap:8
   },
   seperator: {
     borderBottomWidth: 1,
