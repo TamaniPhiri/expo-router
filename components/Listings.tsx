@@ -29,7 +29,7 @@ const Listings = ({ listings, category }: Props) => {
     <Link href={`/listing/${item.id}`}>
       <TouchableOpacity>
         <View>
-          <Image source={{ uri: item.medium_url }} />
+          <Image source={{ uri: item.medium_url }} width={100} height={100} />
         </View>
       </TouchableOpacity>
     </Link>
