@@ -9,6 +9,7 @@ import {
   ListRenderItem,
   TouchableOpacity,
   Image,
+  ActivityIndicator,
 } from "react-native";
 import Colors from "../constants/Colors";
 interface Props {
@@ -23,7 +24,7 @@ const Listings = ({ listings, category }: Props) => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 300);
+    }, 500);
   }, [category]);
 
   const renderRow: ListRenderItem<AirbnbListing> = ({ item }) => (
@@ -72,6 +73,13 @@ const Listings = ({ listings, category }: Props) => {
   );
   return (
     <View style={styles.container}>
+      {loading && (
+        <ActivityIndicator
+          size={64}
+          color={Colors.yellow}
+          style={{ paddingTop: 135 }}
+        />
+      )}
       <FlatList
         ref={listRef}
         data={loading ? [] : listings}
