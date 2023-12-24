@@ -4,6 +4,7 @@ import {
   TouchableOpacity,
   StyleSheet,
   TextInput,
+  ScrollView,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Colors from "../constants/Colors";
@@ -69,6 +70,13 @@ const ExploreHeader = () => {
             <Ionicons name="options-outline" size={24} color={"white"} />
           </TouchableOpacity>
         </View>
+        <ScrollView horizontal>
+          {categories.map((item, i) => (
+            <TouchableOpacity key={i}>
+              <Text style={styles.whiteText}>{item.name}</Text>
+            </TouchableOpacity>
+          ))}
+        </ScrollView>
       </View>
     </SafeAreaView>
   );
