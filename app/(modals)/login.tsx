@@ -1,11 +1,20 @@
-import { View, Text } from 'react-native'
+import { View, Text, TextInput, StyleSheet } from "react-native";
+import Colors from "../../constants/Colors";
+import {} from "react-native-gesture-handler";
 
 const Page = () => {
   return (
-    <View>
-      <Text>Login</Text>
+    <View style={{ paddingHorizontal: 10 }}>
+      <TextInput style={styles.input} />
     </View>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;
+
+const styles = StyleSheet.create({
+  input: {
+    borderColor: Colors.mid,
+    borderWidth: 1,
+  },
+});
