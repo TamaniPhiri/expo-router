@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 10,
     flexDirection: "column",
-    gap: 12,
+    gap: 24,
   },
   input: {
     borderColor: Colors.mid,
