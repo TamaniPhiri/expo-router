@@ -62,6 +62,7 @@ const styles = StyleSheet.create({
   filterContainer: {
     flexDirection: "row",
     alignItems: "center",
+    justifyContent: "space-between",
   },
   filterButton: {
     borderWidth: 1,
