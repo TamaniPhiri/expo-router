@@ -58,5 +58,8 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
   },
-  seperator: { borderBottomWidth: 1 },
+  seperator: {
+    borderBottomWidth: 1,
+    flex:1
+  },
 });
