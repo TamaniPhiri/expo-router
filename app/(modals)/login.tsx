@@ -10,10 +10,19 @@ import Colors from "../../constants/Colors";
 const Page = () => {
   return (
     <View style={styles.container}>
-      <TextInput style={styles.input} />
+      <TextInput
+        style={styles.input}
+        placeholder="Email"
+        placeholderTextColor={Colors.mid}
+      />
       <TouchableOpacity style={styles.button}>
         <Text style={styles.buttonText}>Continue</Text>
       </TouchableOpacity>
+      <View style={styles.dividerContainer}>
+        <View style={styles.seperator}></View>
+        <Text style={{ color: "white" }}>Or</Text>
+        <View style={styles.seperator}></View>
+      </View>
     </View>
   );
 };
@@ -45,4 +54,9 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontFamily: "mon-sb",
   },
+  dividerContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  seperator: { borderBottomWidth: 1 },
 });
