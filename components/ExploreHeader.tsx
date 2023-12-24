@@ -59,7 +59,10 @@ const styles = StyleSheet.create({
     height: 130,
     backgroundColor: "#262626",
   },
-  filterContainer: { flexDirection: "row", alignItems: "center" },
+  filterContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
   filterButton: {
     borderWidth: 1,
     borderColor: "white",
