@@ -46,10 +46,13 @@ const ExploreHeader = () => {
     <SafeAreaView style={{ flex: 1 }}>
       <View style={styles.container}>
         <View style={styles.filterContainer}>
-          <Link style={{ color: "white" }} href={"/(modals)/booking"} asChild>
+          <Link style={styles.searchInput} href={"/(modals)/booking"} asChild>
             <TouchableOpacity>
-              <Ionicons name="search" size={24} />
-              <TextInput style={{ flex: 1 }} />
+              <Ionicons name="search" size={24} color="white" />
+              <View>
+                <Text style={styles.whiteText}>Where to?</Text>
+                <Text style={styles.whiteText}>Anywhere Any Week</Text>
+              </View>
             </TouchableOpacity>
           </Link>
           <TouchableOpacity style={styles.filterButton}>
@@ -80,5 +83,12 @@ const styles = StyleSheet.create({
     padding: 8,
     borderRadius: 24,
   },
-  searchInput: {},
+  searchInput: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  whiteText: {
+    color: "white",
+    fontFamily: "mon",
+  },
 });
