@@ -23,6 +23,9 @@ const Page = () => {
         <Text style={styles.regularText}>Or</Text>
         <View style={styles.seperator}></View>
       </View>
+      <TouchableOpacity style={styles.outlineButton}>
+        <Text style={styles.buttonText}>Continue with Google</Text>
+      </TouchableOpacity>
     </View>
   );
 };
@@ -65,6 +68,14 @@ const styles = StyleSheet.create({
     borderColor: Colors.mid,
   },
   regularText: {
+    color: "white",
+    fontFamily: "mon",
+  },
+  outlineButton: {
+    borderColor: Colors.mid,
+    borderWidth: 1,
+    padding: 14,
+    borderRadius: 6,
     color: "white",
     fontFamily: "mon",
   },
