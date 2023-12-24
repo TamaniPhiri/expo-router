@@ -82,5 +82,6 @@ const styles = StyleSheet.create({
     fontFamily: "mon",
     flexDirection: "row",
     alignItems: "center",
+    justifyContent:"center"
   },
 });
