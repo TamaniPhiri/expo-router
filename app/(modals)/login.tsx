@@ -12,8 +12,8 @@ const Page = () => {
   return (
     <View style={{ paddingHorizontal: 10 }}>
       <TextInput style={styles.input} />
-      <TouchableOpacity style={{backgroundColor:Colors.orange,padding:8,borderRadius:6}}>
-        <Text style={{color:"white",textAlign:"center"}}>Continue</Text>
+      <TouchableOpacity style={styles.button}>
+        <Text style={{ color: "white", textAlign: "center" }}>Continue</Text>
       </TouchableOpacity>
     </View>
   );
@@ -28,5 +28,10 @@ const styles = StyleSheet.create({
     padding: 8,
     borderRadius: 6,
     color: "white",
+  },
+  button: {
+    backgroundColor: Colors.orange,
+    padding: 8,
+    borderRadius: 6,
   },
 });
