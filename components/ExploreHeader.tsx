@@ -104,6 +104,7 @@ const styles = StyleSheet.create({
   searchInputContainer: {
     flexDirection: "row",
     alignItems: "center",
+    gap: 12,
   },
   whiteText: {
     color: "white",
