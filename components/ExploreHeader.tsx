@@ -45,7 +45,7 @@ const ExploreHeader = () => {
     const selected = itemsRef.current[index];
     setActiveIndex(index);
     selected?.measure((x) => {
-      scrollRef.current?.scrollTo(x);
+      scrollRef.current?.scrollTo({ x: x, y: 0, animated: true });
     });
   };
   return (
@@ -87,7 +87,7 @@ const ExploreHeader = () => {
           {categories.map((item, i) => (
             <TouchableOpacity
               key={i}
-              onPress={() => setActiveIndex(i)}
+              onPress={() => selectCategory(i)}
               ref={(el) => (itemsRef.current[i] = el)}
               style={
                 activeIndex === i
