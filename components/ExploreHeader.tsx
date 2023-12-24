@@ -37,16 +37,14 @@ const categories = [
 const ExploreHeader = () => {
   return (
     <SafeAreaView style={{}}>
-      <View>
-        <View style={{}}>
-          <View style={{ flexDirection: "row", alignItems: "center" }}>
-            <Link href={"/(modals)/booking"}>Booking</Link>
-            <TouchableOpacity>
-                <Text style={{color:"white"}}>
-                    Filters
-                </Text>
-            </TouchableOpacity>
-          </View>
+      <View style={{}}>
+        <View style={{ flexDirection: "row", alignItems: "center" }}>
+          <Link style={{ color: "white" }} href={"/(modals)/booking"}>
+            Booking
+          </Link>
+          <TouchableOpacity>
+            <Text style={{ color: "white" }}>Filters</Text>
+          </TouchableOpacity>
         </View>
       </View>
     </SafeAreaView>
