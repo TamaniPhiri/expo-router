@@ -9,6 +9,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import Colors from "../constants/Colors";
 import { Link } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
+import { StatusBar } from "expo-status-bar";
 
 const categories = [
   {
@@ -44,6 +45,7 @@ const categories = [
 const ExploreHeader = () => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
+      <StatusBar style="light" backgroundColor="#262626" />
       <View style={styles.container}>
         <View style={styles.filterContainer}>
           <Link
