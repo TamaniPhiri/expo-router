@@ -3,11 +3,9 @@ import {
   Text,
   TouchableOpacity,
   StyleSheet,
-  TextInput,
   ScrollView,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import Colors from "../constants/Colors";
 import { Link } from "expo-router";
 import { Ionicons, MaterialIcons } from "@expo/vector-icons";
 import { StatusBar } from "expo-status-bar";
@@ -76,7 +74,7 @@ const ExploreHeader = () => {
           contentContainerStyle={{
             alignItems: "center",
             gap: 20,
-            paddingHorizontal: 16
+            paddingHorizontal: 16,
           }}
         >
           {categories.map((item, i) => (
