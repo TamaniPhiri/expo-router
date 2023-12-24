@@ -4,7 +4,7 @@ import React from 'react'
 const ExploreHeader = () => {
   return (
     <View>
-      <Text>ExploreHeader</Text>
+      <Text style={{color:"white"}}>ExploreHeader</Text>
     </View>
   )
 }
