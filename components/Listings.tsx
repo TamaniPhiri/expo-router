@@ -28,14 +28,17 @@ const Listings = ({ listings, category }: Props) => {
 
   const renderRow: ListRenderItem<AirbnbListing> = ({ item }) => (
     <Link href={`/listing/${item.id}`} asChild>
-      <TouchableOpacity style={{ position: "relative" }}>
-        <View style={styles.card}>
+      <TouchableOpacity style={styles.card}>
+        <View>
           <Image source={{ uri: item.medium_url }} style={styles.cardImage} />
           <TouchableOpacity
-            style={{ position: "absolute", right: 30, top: 30, zIndex: 1 }}
+            style={{ position: "absolute", right: 20, top: 20, zIndex: 1 }}
           >
-            <Ionicons name="heart-outline" size={24} />
+            <Ionicons name="heart-outline" size={24} color={"white"} />
           </TouchableOpacity>
+        </View>
+        <View>
+          <Text style={{ color: "white" }}>{item.name}</Text>
         </View>
       </TouchableOpacity>
     </Link>
@@ -63,6 +66,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   card: {
-    padding: 16,
+    paddingHorizontal: 16,
+    paddingTop: 16,
   },
 });
