@@ -10,6 +10,7 @@ import {
   TouchableOpacity,
   Image,
 } from "react-native";
+import Colors from "../constants/Colors";
 interface Props {
   listings: any;
   category: string;
@@ -46,13 +47,24 @@ const Listings = ({ listings, category }: Props) => {
             gap: 12,
           }}
         >
-          <Text style={{ color: "white", fontFamily: "mon" }}>{item.name}</Text>
+          <Text style={{ color: "white", fontFamily: "mon-sb" }}>
+            {item.name}
+          </Text>
           <View style={{ flexDirection: "row", alignItems: "center", gap: 6 }}>
-            <Ionicons name="star" color={"white"} />
+            <Ionicons name="star" color={Colors.yellow} size={16} />
             <Text style={{ color: "white" }}>
               {item.review_scores_rating / 20}
             </Text>
           </View>
+        </View>
+        <Text style={{ fontFamily: "mon", color: "#e5e5e5" }}>
+          {item.room_type}
+        </Text>
+        <View style={{ flexDirection: "row", alignItems: "center", gap: 6 }}>
+          <Text style={{ color: "white", fontFamily: "mon-sb" }}>
+            K {item.price}
+          </Text>
+          <Text style={{ fontFamily: "mon", color: "#e5e5e5" }}>night</Text>
         </View>
       </TouchableOpacity>
     </Link>
