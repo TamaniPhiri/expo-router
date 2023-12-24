@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Colors from "../constants/Colors";
 import { Link } from "expo-router";
@@ -43,8 +43,8 @@ const ExploreHeader = () => {
           <Link style={{ color: "white" }} href={"/(modals)/booking"}>
             Booking
           </Link>
-          <TouchableOpacity>
-            <Ionicons name="options-outline" size={24} />
+          <TouchableOpacity style={styles.filterButton}>
+            <Ionicons name="options-outline" size={24} color={"white"} />
           </TouchableOpacity>
         </View>
       </View>
@@ -53,3 +53,11 @@ const ExploreHeader = () => {
 };
 
 export default ExploreHeader;
+
+const styles = StyleSheet.create({
+  filterButton: {
+    borderWidth: 1,
+    borderColor: "white",
+    padding: 8,
+  },
+});
