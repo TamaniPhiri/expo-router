@@ -38,13 +38,13 @@ const categories = [
 const ExploreHeader = () => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <View style={{ height: 130, backgroundColor: "gray" }}>
+      <View style={{ height: 130, backgroundColor: "#262626" }}>
         <View style={{ flexDirection: "row", alignItems: "center" }}>
           <Link style={{ color: "white" }} href={"/(modals)/booking"}>
             Booking
           </Link>
           <TouchableOpacity>
-            <Ionicons name="options-outline" />
+            <Ionicons name="options-outline" size={24} />
           </TouchableOpacity>
         </View>
       </View>
