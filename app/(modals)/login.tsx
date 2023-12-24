@@ -12,8 +12,8 @@ const Page = () => {
   return (
     <View style={{ paddingHorizontal: 10 }}>
       <TextInput style={styles.input} />
-      <TouchableOpacity>
-        <Text>Continue</Text>
+      <TouchableOpacity style={{backgroundColor:Colors.orange}}>
+        <Text style={{color:"white"}}>Continue</Text>
       </TouchableOpacity>
     </View>
   );
