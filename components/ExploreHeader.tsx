@@ -70,7 +70,15 @@ const ExploreHeader = () => {
             <Ionicons name="options-outline" size={24} color={"white"} />
           </TouchableOpacity>
         </View>
-        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+        <ScrollView
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          contentContainerStyle={{
+            alignItems: "center",
+            gap: 20,
+            paddingHorizontal: 16
+          }}
+        >
           {categories.map((item, i) => (
             <TouchableOpacity
               key={i}
