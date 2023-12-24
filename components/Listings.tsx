@@ -80,6 +80,6 @@ const styles = StyleSheet.create({
   },
   card: {
     paddingHorizontal: 16,
-    paddingTop: 16,
+    paddingTop: 18,
   },
 });
