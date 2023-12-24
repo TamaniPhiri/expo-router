@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 import Colors from "../../constants/Colors";
+import { Ionicons } from "@expo/vector-icons";
 
 const Page = () => {
   return (
@@ -24,6 +25,7 @@ const Page = () => {
         <View style={styles.seperator}></View>
       </View>
       <TouchableOpacity style={styles.outlineButton}>
+        <Ionicons name="md-logo-google" />
         <Text style={styles.buttonText}>Continue with Google</Text>
       </TouchableOpacity>
     </View>
@@ -78,5 +80,7 @@ const styles = StyleSheet.create({
     borderRadius: 6,
     color: "white",
     fontFamily: "mon",
+    flexDirection: "row",
+    alignItems: "center",
   },
 });
