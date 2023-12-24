@@ -51,15 +51,7 @@ const ExploreHeader = () => {
             href={"/(modals)/booking"}
             asChild
           >
-            <TouchableOpacity
-              style={{
-                borderColor: "white",
-                borderWidth: 0.5,
-                flex: 1,
-                padding: 8,
-                borderRadius: 24,
-              }}
-            >
+            <TouchableOpacity style={styles.search}>
               <Ionicons name="search" size={24} color="white" />
               <View>
                 <Text style={[styles.whiteText, { fontFamily: "mon-b" }]}>
@@ -97,7 +89,7 @@ const styles = StyleSheet.create({
   },
   filterButton: {
     borderWidth: 1,
-    borderColor: "white",
+    borderColor: "gray",
     padding: 8,
     borderRadius: 24,
   },
@@ -108,5 +100,12 @@ const styles = StyleSheet.create({
   },
   whiteText: {
     color: "white",
+  },
+  search: {
+    borderColor: "gray",
+    borderWidth: 0.5,
+    flex: 1,
+    padding: 8,
+    borderRadius: 24,
   },
 });
