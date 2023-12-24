@@ -38,7 +38,7 @@ const ExploreHeader = () => {
   return (
     <SafeAreaView style={{}}>
       <View>
-        <View style={{ backgroundColor: Colors.mid }}>
+        <View style={{}}>
           <View style={{ flexDirection: "row", alignItems: "center" }}>
             <Link href={"/(modals)/booking"}>Booking</Link>
             <TouchableOpacity>
