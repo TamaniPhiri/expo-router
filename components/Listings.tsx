@@ -37,8 +37,18 @@ const Listings = ({ listings, category }: Props) => {
             <Ionicons name="heart-outline" size={24} color={"white"} />
           </TouchableOpacity>
         </View>
-        <View>
+        <View
+          style={{
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "space-between",
+          }}
+        >
           <Text style={{ color: "white" }}>{item.name}</Text>
+          <View style={{ flexDirection: "row", alignItems: "center", gap: 6 }}>
+            <Ionicons name="star" color={"white"} />
+            <Text style={{ color: "white" }}>{item.review_scores_rating}</Text>
+          </View>
         </View>
       </TouchableOpacity>
     </Link>
