@@ -4,7 +4,7 @@ interface Props {
   category: string;
 }
 
-const Listings = () => {
+const Listings = ({ listings, category }: Props) => {
   return (
     <View>
       <Text>Listings</Text>
