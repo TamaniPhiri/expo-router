@@ -10,7 +10,7 @@ import {} from "react-native-gesture-handler";
 
 const Page = () => {
   return (
-    <View style={{ paddingHorizontal: 10, flexDirection: "column", gap: 12 }}>
+    <View style={styles.container}>
       <TextInput style={styles.input} />
       <TouchableOpacity style={styles.button}>
         <Text style={styles.buttonText}>Continue</Text>
@@ -22,6 +22,11 @@ const Page = () => {
 export default Page;
 
 const styles = StyleSheet.create({
+  container: {
+    paddingHorizontal: 10,
+    flexDirection: "column",
+    gap: 12,
+  },
   input: {
     borderColor: Colors.mid,
     borderWidth: 1,
