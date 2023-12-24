@@ -1,5 +1,7 @@
 import { View, Text } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import Colors from "../constants/Colors";
+import { Link } from "expo-router";
 
 const categories = [
   {
@@ -35,7 +37,13 @@ const categories = [
 const ExploreHeader = () => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <Text style={{ color: "white" }}>ExploreHeader</Text>
+      <View>
+        <View style={{ backgroundColor: Colors.mid }}>
+          <View>
+            <Link href={"/(modals)/booking"}>Booking</Link>
+          </View>
+        </View>
+      </View>
     </SafeAreaView>
   );
 };
