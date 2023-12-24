@@ -38,7 +38,7 @@ const categories = [
 const ExploreHeader = () => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <View style={{ height: 130, backgroundColor: "#262626" }}>
+      <View style={styles.container}>
         <View style={{ flexDirection: "row", alignItems: "center" }}>
           <Link style={{ color: "white" }} href={"/(modals)/booking"}>
             Booking
@@ -55,10 +55,14 @@ const ExploreHeader = () => {
 export default ExploreHeader;
 
 const styles = StyleSheet.create({
+  container: {
+    height: 130,
+    backgroundColor: "#262626",
+  },
   filterButton: {
     borderWidth: 1,
     borderColor: "white",
     padding: 8,
-    borderRadius:24
+    borderRadius: 24,
   },
 });
