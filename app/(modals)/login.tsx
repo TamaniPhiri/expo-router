@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
   buttonText: {
     color: "white",
     textAlign: "center",
-    fontSize: 18,
+    fontSize: 16,
     fontFamily: "mon-sb",
   },
   dividerContainer: {
