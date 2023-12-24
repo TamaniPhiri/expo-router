@@ -1,17 +1,22 @@
-import { useEffect } from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { useEffect, useState } from "react";
+import { View, Text, StyleSheet, FlatList } from "react-native";
 interface Props {
   listings: any;
   category: string;
 }
 
 const Listings = ({ listings, category }: Props) => {
+  const [loading, setLoading] = useState<boolean>(false);
   useEffect(() => {
-    console.log("reload listings",listings.length);
+    console.log("reload listings", listings.length);
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 300);
   }, [category]);
   return (
     <View style={styles.container}>
-      <Text>Listings</Text>
+      <FlatList data={listings} />
     </View>
   );
 };
