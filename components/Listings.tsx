@@ -42,12 +42,15 @@ const Listings = ({ listings, category }: Props) => {
             flexDirection: "row",
             alignItems: "center",
             justifyContent: "space-between",
+            paddingTop: 6,
           }}
         >
-          <Text style={{ color: "white" }}>{item.name}</Text>
+          <Text style={{ color: "white", fontFamily: "mon" }}>{item.name}</Text>
           <View style={{ flexDirection: "row", alignItems: "center", gap: 6 }}>
             <Ionicons name="star" color={"white"} />
-            <Text style={{ color: "white" }}>{item.review_scores_rating}</Text>
+            <Text style={{ color: "white" }}>
+              {item.review_scores_rating / 20}
+            </Text>
           </View>
         </View>
       </TouchableOpacity>
