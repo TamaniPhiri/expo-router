@@ -76,15 +76,7 @@ const ExploreHeader = () => {
           }}
         >
           {categories.map((item, i) => (
-            <TouchableOpacity
-              key={i}
-              ref={(el) => (itemsRef.current[i] = el)}
-              style={
-                activeIndex === i
-                  ? styles.categoryTextActive
-                  : styles.categoryText
-              }
-            >
+            <TouchableOpacity key={i}>
               <MaterialIcons
                 name={item.icon as any}
                 color={"white"}
@@ -142,7 +134,17 @@ const styles = StyleSheet.create({
   categoryTextActive: {
     color: "#e5e5e5",
     fontFamily: "mon-sb",
-    borderBottomColor: "white",
+  },
+  categoryBtn: {
+    flexDirection: "column",
+    alignItems: "center",
+    gap: 6,
+  },
+  categoryBtnActive: {
+    flexDirection: "column",
+    alignItems: "center",
+    gap: 6,
     borderBottomWidth: 2,
+    borderBottomColor: "white",
   },
 });
