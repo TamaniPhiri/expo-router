@@ -20,7 +20,6 @@ const Listings = ({ listings, category }: Props) => {
   const [loading, setLoading] = useState<boolean>(false);
   const listRef = useRef<FlatList>(null);
   useEffect(() => {
-    console.log("reload listings", listings.length);
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
