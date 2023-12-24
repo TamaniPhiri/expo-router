@@ -47,11 +47,22 @@ const ExploreHeader = () => {
       <View style={styles.container}>
         <View style={styles.filterContainer}>
           <Link style={styles.searchInput} href={"/(modals)/booking"} asChild>
-            <TouchableOpacity>
+            <TouchableOpacity
+              style={{
+                borderColor: Colors.mid,
+                borderWidth: 0.5,
+                flex: 1,
+                padding: 8,
+              }}
+            >
               <Ionicons name="search" size={24} color="white" />
               <View>
-                <Text style={styles.whiteText}>Where to?</Text>
-                <Text style={styles.whiteText}>Anywhere Any Week</Text>
+                <Text style={[styles.whiteText, { fontFamily: "mon-b" }]}>
+                  Where to?
+                </Text>
+                <Text style={[styles.whiteText, { fontFamily: "mon" }]}>
+                  Anywhere Any Week
+                </Text>
               </View>
             </TouchableOpacity>
           </Link>
@@ -89,6 +100,5 @@ const styles = StyleSheet.create({
   },
   whiteText: {
     color: "white",
-    fontFamily: "mon",
   },
 });
