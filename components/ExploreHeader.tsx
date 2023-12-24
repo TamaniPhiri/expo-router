@@ -131,6 +131,11 @@ const styles = StyleSheet.create({
     borderRadius: 24,
   },
   categoryText: {
-    color: "#a3a3a3",
+    color: "#d4d4d4",
+    fontFamily: "mon-sb",
+  },
+  categoryTextActive: {
+    color: "#e5e5e5",
+    fontFamily: "mon-sb",
   },
 });
