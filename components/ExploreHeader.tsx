@@ -1,14 +1,10 @@
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  StyleSheet,
-} from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Link } from "expo-router";
 import { Ionicons, MaterialIcons } from "@expo/vector-icons";
 import { StatusBar } from "expo-status-bar";
 import { ScrollView } from "react-native-gesture-handler";
+import { useRef } from "react";
 
 const categories = [
   {
@@ -42,6 +38,7 @@ const categories = [
 ];
 
 const ExploreHeader = () => {
+  const itemsRef = useRef<Array<TouchableOpacity>>([]);
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <StatusBar style="light" backgroundColor="#262626" />
@@ -80,12 +77,12 @@ const ExploreHeader = () => {
           {categories.map((item, i) => (
             <TouchableOpacity
               key={i}
-              style={{ flexDirection: "row", alignItems: "center", gap: 6 }}
+              style={{ flexDirection: "column", alignItems: "center", gap: 6 }}
             >
               <MaterialIcons
                 name={item.icon as any}
                 color={"white"}
-                size={24}
+                size={20}
               />
               <Text style={styles.whiteText}>{item.name}</Text>
             </TouchableOpacity>
