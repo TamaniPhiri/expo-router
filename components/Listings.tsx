@@ -1,3 +1,4 @@
+import { Ionicons } from "@expo/vector-icons";
 import { Link } from "expo-router";
 import { useEffect, useRef, useState } from "react";
 import {
@@ -27,9 +28,14 @@ const Listings = ({ listings, category }: Props) => {
 
   const renderRow: ListRenderItem<AirbnbListing> = ({ item }) => (
     <Link href={`/listing/${item.id}`} asChild>
-      <TouchableOpacity>
+      <TouchableOpacity style={{ position: "relative" }}>
         <View style={styles.card}>
           <Image source={{ uri: item.medium_url }} style={styles.cardImage} />
+          <TouchableOpacity
+            style={{ position: "absolute", right: 30, top: 30, zIndex: 1 }}
+          >
+            <Ionicons name="heart-outline" size={24} />
+          </TouchableOpacity>
         </View>
       </TouchableOpacity>
     </Link>
