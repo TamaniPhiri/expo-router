@@ -46,7 +46,11 @@ const ExploreHeader = () => {
     <SafeAreaView style={{ flex: 1 }}>
       <View style={styles.container}>
         <View style={styles.filterContainer}>
-          <Link style={styles.searchInput} href={"/(modals)/booking"} asChild>
+          <Link
+            style={styles.searchInputContainer}
+            href={"/(modals)/booking"}
+            asChild
+          >
             <TouchableOpacity
               style={{
                 borderColor: "white",
@@ -97,7 +101,7 @@ const styles = StyleSheet.create({
     padding: 8,
     borderRadius: 24,
   },
-  searchInput: {
+  searchInputContainer: {
     flexDirection: "row",
     alignItems: "center",
   },
