@@ -2,7 +2,7 @@ import { useLocalSearchParams } from "expo-router";
 import { View, Text, StyleSheet, Dimensions } from "react-native";
 import listingsData from "../../assets/data/airbnb-listings.json";
 import Animated, { FadeInLeft, ZoomInUp } from "react-native-reanimated";
-import { Feather, Ionicons } from "@expo/vector-icons";
+import { Feather, FontAwesome, Ionicons } from "@expo/vector-icons";
 
 const { width } = Dimensions.get("window");
 const Page = () => {
@@ -32,14 +32,18 @@ const Page = () => {
           <Text>
             {listing.room_type} in {listing.smart_location}
           </Text>
-          <Animated.View style={{ borderColor: "gray", borderWidth: 0.5 }}>
-            <View>
-              <Feather name="users" />
+          <Animated.View style={{ borderColor: "gray", borderWidth: 0.5 ,flexDirection:"row",justifyContent:"space-evenly"}}>
+            <View style={styles.metricCard}>
+              <Feather name="users" size={24} />
               <Text>{listing.guests_included}</Text>
             </View>
-            <View>
+            <View style={styles.metricCard}>
               <Ionicons name="bed-outline" size={24} color="black" />
               <Text>{listing.bedrooms}</Text>
+            </View>
+            <View style={styles.metricCard}>
+              <FontAwesome name="bath" size={24} color="black" />
+              <Text>{listing.bathrooms}</Text>
             </View>
           </Animated.View>
         </View>
@@ -65,5 +69,8 @@ const styles = StyleSheet.create({
   },
   infoContainer: {
     padding: 24,
+  },
+  metricCard: {
+    alignItems:"center"
   },
 });
