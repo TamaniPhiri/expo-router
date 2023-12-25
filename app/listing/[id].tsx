@@ -78,14 +78,14 @@ const Page = () => {
               </Text>
             </View>
           </View>
-          <Text style={{ color: "white", paddingTop: 12, fontFamily: "mon" }}>
-            {listing.description}
-          </Text>
+          <Text style={styles.description}>{listing.description}</Text>
         </View>
       </Animated.ScrollView>
       <Animated.View entering={SlideInUp.delay(600)} style={styles.footer}>
         <Text>K {listing.price} night</Text>
-        <TouchableOpacity></TouchableOpacity>
+        <TouchableOpacity style>
+          <Text>Reserve</Text>
+        </TouchableOpacity>
       </Animated.View>
     </View>
   );
@@ -149,5 +149,10 @@ const styles = StyleSheet.create({
     borderTopWidth: 0.2,
     borderColor: Colors.yellow,
     alignItems: "center",
+  },
+  description: {
+    color: "white",
+    paddingTop: 12,
+    fontFamily: "mon",
   },
 });
