@@ -1,7 +1,11 @@
 import { useLocalSearchParams } from "expo-router";
 import { View, Text, StyleSheet, Dimensions } from "react-native";
 import listingsData from "../../assets/data/airbnb-listings.json";
-import Animated, { FadeInLeft, ZoomInUp } from "react-native-reanimated";
+import Animated, {
+  FadeInLeft,
+  FadeInDown,
+  ZoomInUp,
+} from "react-native-reanimated";
 import { Feather, FontAwesome, Ionicons } from "@expo/vector-icons";
 
 const { width } = Dimensions.get("window");
@@ -32,7 +36,10 @@ const Page = () => {
           <Text>
             {listing.room_type} in {listing.smart_location}
           </Text>
-          <Animated.View style={styles.metricContainer}>
+          <Animated.View
+            entering={FadeInDown.delay(600)}
+            style={styles.metricContainer}
+          >
             <View style={styles.metricCard}>
               <Feather name="users" size={24} />
               <Text>{listing.guests_included}</Text>
@@ -78,7 +85,7 @@ const styles = StyleSheet.create({
     borderWidth: 0.5,
     flexDirection: "row",
     justifyContent: "space-evenly",
-    padding:8,
-    borderRadius:10
+    padding: 8,
+    borderRadius: 10,
   },
 });
