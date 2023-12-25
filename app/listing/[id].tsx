@@ -30,7 +30,9 @@ const Page = () => {
     navigation.setOptions({
       headerRight: () => (
         <View>
-          <TouchableOpacity>
+          <TouchableOpacity
+            style={{ backgroundColor: "white", borderRadius: 30 }}
+          >
             <Ionicons name="share-outline" />
           </TouchableOpacity>
         </View>
