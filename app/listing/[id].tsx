@@ -89,6 +89,8 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   location: {
-    marginVertical: 4,
+    marginVertical: 12,
+    fontFamily:"mon",
+    color:"#e5e5e5"
   },
 });
