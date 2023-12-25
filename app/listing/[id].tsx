@@ -81,7 +81,7 @@ const Page = () => {
           <Text style={styles.description}>{listing.description}</Text>
         </View>
       </Animated.ScrollView>
-      <Animated.View entering={SlideInDown.delay(600)} style={styles.footer}>
+      <Animated.View entering={SlideInDown.delay(800).duration(500)} style={styles.footer}>
         <Text style={{ color: "white", fontFamily: "mon-b" }}>
           K {listing.price} / night
         </Text>
