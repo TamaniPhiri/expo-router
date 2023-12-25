@@ -99,11 +99,11 @@ const styles = StyleSheet.create({
   },
   metricContainer: {
     borderColor: Colors.yellow,
-    borderWidth: 0.5,
+    borderWidth: 0.2,
     flexDirection: "row",
     justifyContent: "space-evenly",
     padding: 8,
-    borderRadius: 10,
+    borderRadius: 5,
   },
   location: {
     marginVertical: 12,
