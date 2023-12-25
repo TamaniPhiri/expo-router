@@ -37,36 +37,38 @@ const Listings = ({ listings, category }: Props) => {
           >
             <Ionicons name="heart-outline" size={24} color={"white"} />
           </TouchableOpacity>
-        </View>
-        <View
-          style={{
-            flexDirection: "row",
-            alignItems: "center",
-            justifyContent: "space-between",
-            paddingTop: 6,
-            gap: 12,
-          }}
-        >
-          <Text style={{ color: "white", fontFamily: "mon-sb" }}>
-            {item.name}
+          <View
+            style={{
+              flexDirection: "row",
+              alignItems: "center",
+              justifyContent: "space-between",
+              paddingTop: 6,
+              gap: 12,
+            }}
+          >
+            <Text style={{ color: "white", fontFamily: "mon-sb" }}>
+              {item.name}
+            </Text>
+            <View
+              style={{ flexDirection: "row", alignItems: "center", gap: 6 }}
+            >
+              <Ionicons name="star" color={Colors.yellow} size={16} />
+              <Text style={{ color: "white" }}>
+                {item.review_scores_rating / 20}
+              </Text>
+            </View>
+          </View>
+          <Text
+            style={{ fontFamily: "mon", color: "#e5e5e5", paddingVertical: 3 }}
+          >
+            {item.room_type}
           </Text>
           <View style={{ flexDirection: "row", alignItems: "center", gap: 6 }}>
-            <Ionicons name="star" color={Colors.yellow} size={16} />
-            <Text style={{ color: "white" }}>
-              {item.review_scores_rating / 20}
+            <Text style={{ color: "white", fontFamily: "mon-sb" }}>
+              K {item.price}
             </Text>
+            <Text style={{ fontFamily: "mon", color: "#e5e5e5" }}>night</Text>
           </View>
-        </View>
-        <Text
-          style={{ fontFamily: "mon", color: "#e5e5e5", paddingVertical: 3 }}
-        >
-          {item.room_type}
-        </Text>
-        <View style={{ flexDirection: "row", alignItems: "center", gap: 6 }}>
-          <Text style={{ color: "white", fontFamily: "mon-sb" }}>
-            K {item.price}
-          </Text>
-          <Text style={{ fontFamily: "mon", color: "#e5e5e5" }}>night</Text>
         </View>
       </TouchableOpacity>
     </Link>
