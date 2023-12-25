@@ -2,7 +2,7 @@ import { useLocalSearchParams } from "expo-router";
 import { View, Text, StyleSheet, Dimensions } from "react-native";
 import listingsData from "../../assets/data/airbnb-listings.json";
 import Animated, { FadeInLeft, ZoomInUp } from "react-native-reanimated";
-import { Feather } from "@expo/vector-icons";
+import { Feather, Ionicons } from "@expo/vector-icons";
 
 const { width } = Dimensions.get("window");
 const Page = () => {
@@ -34,11 +34,13 @@ const Page = () => {
           </Text>
           <Animated.View style={{ borderColor: "gray", borderWidth: 0.5 }}>
             <View>
-              <Feather name="users"/>
-              <Text>
-              {listing.guests_included}
-              </Text>
-              </View> {listing.bedrooms} 
+              <Feather name="users" />
+              <Text>{listing.guests_included}</Text>
+            </View>
+            <View>
+              <Ionicons name="md-bed-outline" size={24} color="black" />
+              <Text>{listing.bedrooms}</Text>
+            </View>
           </Animated.View>
         </View>
       </Animated.ScrollView>
