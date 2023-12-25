@@ -28,6 +28,7 @@ const Page = () => {
           >
             {listing.name}
           </Animated.Text>
+          <Text>{}</Text>
         </View>
       </Animated.ScrollView>
     </View>
@@ -47,9 +48,9 @@ const styles = StyleSheet.create({
   name: {
     fontFamily: "mon-b",
     color: "white",
-    fontSize: 20,
+    fontSize: 24,
   },
   infoContainer: {
-    paddingHorizontal: 10,
+    padding: 24,
   },
 });
