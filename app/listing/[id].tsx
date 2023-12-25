@@ -1,4 +1,4 @@
-import { useLocalSearchParams } from "expo-router";
+import { useLocalSearchParams, useNavigation } from "expo-router";
 import {
   View,
   Text,
@@ -16,13 +16,19 @@ import Animated, {
 } from "react-native-reanimated";
 import { AntDesign, Feather, FontAwesome, Ionicons } from "@expo/vector-icons";
 import Colors from "../../constants/Colors";
+import { useLayoutEffect } from "react";
 
 const { width } = Dimensions.get("window");
 const Page = () => {
+  const navigation=useNavigation();
   const { id } = useLocalSearchParams<{ id: string }>();
   const listing: AirbnbListing = (listingsData as any[]).find(
     (item: AirbnbListing) => item.id === id
   );
+
+  useLayoutEffect(()=>{
+
+  },[])
   return (
     <View style={styles.container}>
       <Animated.ScrollView>
