@@ -11,7 +11,7 @@ const Page = () => {
   return (
     <View style={styles.container}>
       <ScrollView>
-        <Image source={{ uri: listing.medium_url }} height={200} />
+        <Image source={{ uri: listing.xl_picture_url}} height={200} />
       </ScrollView>
     </View>
   );
