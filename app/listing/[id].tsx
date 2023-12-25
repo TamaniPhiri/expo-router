@@ -21,7 +21,7 @@ const Page = () => {
           source={{ uri: listing.xl_picture_url }}
           style={styles.image}
         />
-        <View>
+        <View style={styles.infoContainer}>
           <Animated.Text
             style={styles.name}
             entering={FadeInLeft.delay(400).duration(500)}
@@ -48,5 +48,8 @@ const styles = StyleSheet.create({
     fontFamily: "mon-b",
     color: "white",
     fontSize: 20,
+  },
+  infoContainer: {
+    paddingHorizontal: 10,
   },
 });
