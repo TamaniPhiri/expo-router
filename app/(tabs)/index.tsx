@@ -4,6 +4,7 @@ import { Stack } from "expo-router";
 import ExploreHeader from "../../components/ExploreHeader";
 import Listings from "../../components/Listings";
 import listingsData from "../../assets/data/airbnb-listings.json";
+import listingsDataGeo from "../../assets/data/airbnb-listings.geo.json";
 import ListingsMap from "../../components/ListingsMap";
 
 const Page = () => {
@@ -20,7 +21,7 @@ const Page = () => {
         }}
       />
       {/* <Listings listings={items} category={category} /> */}
-      <ListingsMap/>
+      <ListingsMap listings={listingsDataGeo}/>
     </View>
   );
 };
