@@ -58,8 +58,6 @@ function RootLayoutNav() {
         <Stack.Screen
           name="listing/[id]"
           options={{
-            presentation: "transparentModal",
-            animation: "fade",
             title: "",
           }}
         />
@@ -68,6 +66,8 @@ function RootLayoutNav() {
           options={{
             title: "Booking",
             headerTitleStyle: { fontFamily: "mon-sb" },
+            presentation: "transparentModal",
+            animation: "fade",
           }}
         />
       </Stack>
