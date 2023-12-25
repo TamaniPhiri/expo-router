@@ -1,12 +1,18 @@
 import { useLocalSearchParams } from "expo-router";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Image } from "react-native";
+import { ScrollView } from "react-native-gesture-handler";
+import listingsData from "../../assets/data/airbnb-listings.json";
 
 const Page = () => {
   const { id } = useLocalSearchParams<{ id: string }>();
-  console.log(id);
+  const listing: AirbnbListing = (listingsData as any[]).find(
+    (item: AirbnbListing) => item.id === id
+  );
   return (
     <View style={styles.container}>
-      <Text>Listing</Text>
+      <ScrollView>
+        <Image source={{ uri: listing.medium_url }} />
+      </ScrollView>
     </View>
   );
 };
