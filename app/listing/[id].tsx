@@ -31,9 +31,9 @@ const Page = () => {
           <Text>
             {listing.room_type} in {listing.smart_location}
           </Text>
-          <Text>
-            {listing.guests_included} guests · {listing.bedrooms}
-          </Text>
+          <Animated.View style={{ borderColor: "gray", borderWidth: 0.5 }}>
+            {listing.guests_included} guests · {listing.bedrooms} bedrooms
+          </Animated.View>
         </View>
       </Animated.ScrollView>
     </View>
