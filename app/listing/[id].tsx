@@ -82,7 +82,7 @@ const Page = () => {
         </View>
       </Animated.ScrollView>
       <Animated.View entering={SlideInUp.delay(600)} style={styles.footer}>
-        <Text style={{color:"white",fontFamily:"mon"}}>K {listing.price} night</Text>
+        <Text style={{color:"white",fontFamily:"mon-b"}}>K {listing.price} night</Text>
         <TouchableOpacity style={{}}>
           <Text>Reserve</Text>
         </TouchableOpacity>
