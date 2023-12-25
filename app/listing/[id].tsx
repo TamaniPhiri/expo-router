@@ -1,7 +1,7 @@
 import { useLocalSearchParams } from "expo-router";
 import { View, Text, StyleSheet, Dimensions } from "react-native";
 import listingsData from "../../assets/data/airbnb-listings.json";
-import Animated from "react-native-reanimated";
+import Animated, { SlideInUp } from "react-native-reanimated";
 
 const { width } = Dimensions.get("window");
 const Page = () => {
@@ -13,6 +13,7 @@ const Page = () => {
     <View style={styles.container}>
       <Animated.ScrollView>
         <Animated.Image
+        entering={SlideInUp}
           source={{ uri: listing.xl_picture_url }}
           style={styles.image}
         />

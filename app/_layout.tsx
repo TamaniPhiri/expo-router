@@ -60,6 +60,7 @@ function RootLayoutNav() {
           options={{
             title: "",
             headerTransparent: true,
+            presentation:"modal"
           }}
         />
         <Stack.Screen
