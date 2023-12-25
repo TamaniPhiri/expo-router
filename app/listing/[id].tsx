@@ -38,19 +38,19 @@ const Page = () => {
             style={styles.metricContainer}
           >
             <View style={styles.metricCard}>
-              <Feather name="users" size={24} color={Colors.orange} />
+              <Feather name="users" size={24} color={Colors.yellow} />
               <Text style={styles.metricText}>{listing.guests_included}</Text>
             </View>
             <View style={styles.metricCard}>
-              <Ionicons name="bed-outline" size={24} color={Colors.orange} />
+              <Ionicons name="bed-outline" size={24} color={Colors.yellow} />
               <Text style={styles.metricText}>{listing.bedrooms}</Text>
             </View>
             <View style={styles.metricCard}>
-              <FontAwesome name="bath" size={24} color={Colors.orange} />
+              <FontAwesome name="bath" size={24} color={Colors.yellow} />
               <Text style={styles.metricText}>{listing.bathrooms}</Text>
             </View>
             <View style={styles.metricCard}>
-              <AntDesign name="staro" size={24} color={Colors.orange} />
+              <AntDesign name="staro" size={24} color={Colors.yellow} />
               <Text style={styles.metricText}>
                 {listing.review_scores_rating / 20}
               </Text>
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   metricContainer: {
-    borderColor: Colors.orange,
+    borderColor: Colors.yellow,
     borderWidth: 0.5,
     flexDirection: "row",
     justifyContent: "space-evenly",
