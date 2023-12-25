@@ -88,6 +88,7 @@ const Listings = ({ listings, category }: Props) => {
         data={loading ? [] : listings}
         renderItem={renderRow}
         maxToRenderPerBatch={10}
+        removeClippedSubviews={true}
       />
     </View>
   );
