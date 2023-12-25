@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   metricContainer: {
-    borderColor: "gray",
+    borderColor: Colors.orange,
     borderWidth: 0.5,
     flexDirection: "row",
     justifyContent: "space-evenly",
