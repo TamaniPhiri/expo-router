@@ -56,13 +56,24 @@ const Page = () => {
               </Text>
             </View>
           </Animated.View>
-          <View style={{ flexDirection: "row", marginTop: 12 }}>
+          <View
+            style={{
+              flexDirection: "row",
+              marginTop: 12,
+              alignItems: "center",
+              gap: 12,
+            }}
+          >
             <Image
               source={{ uri: listing.host_picture_url }}
               width={48}
               height={48}
-              style={{ borderRadius: 30 }}
+              style={{ borderRadius: 30, backgroundColor: Colors.yellow }}
             />
+            <View>
+              <Text>{listing.host_name}</Text>
+              <Text>Host since {listing.host_since}</Text>
+            </View>
           </View>
         </View>
       </Animated.ScrollView>
