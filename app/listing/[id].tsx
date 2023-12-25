@@ -17,12 +17,15 @@ const Page = () => {
     <View style={styles.container}>
       <Animated.ScrollView>
         <Animated.Image
-          entering={ZoomInUp.duration(300)}
+          entering={ZoomInUp.duration(500)}
           source={{ uri: listing.xl_picture_url }}
           style={styles.image}
         />
         <View>
-          <Animated.Text entering={FadeInLeft.delay(400).duration(500)}>
+          <Animated.Text
+            style={styles.name}
+            entering={FadeInLeft.delay(400).duration(500)}
+          >
             {listing.name}
           </Animated.Text>
         </View>
@@ -40,5 +43,10 @@ const styles = StyleSheet.create({
   image: {
     width: width,
     height: 300,
+  },
+  name: {
+    fontFamily: "mon-b",
+    color: "white",
+    fontSize: 20,
   },
 });
