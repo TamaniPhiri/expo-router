@@ -83,7 +83,7 @@ const Page = () => {
       </Animated.ScrollView>
       <Animated.View entering={SlideInUp.delay(600)} style={styles.footer}>
         <Text style={{ color: "white", fontFamily: "mon-b" }}>
-          K {listing.price} night
+          K {listing.price} / night
         </Text>
         <TouchableOpacity
           style={{ backgroundColor: Colors.orange, padding: 12 }}
