@@ -28,7 +28,9 @@ const Page = () => {
           >
             {listing.name}
           </Animated.Text>
-          <Text>{}</Text>
+          <Text>
+            {listing.room_type} in {listing.smart_location}
+          </Text>
         </View>
       </Animated.ScrollView>
     </View>
