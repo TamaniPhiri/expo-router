@@ -2,6 +2,7 @@ import { useLocalSearchParams } from "expo-router";
 import { View, Text, StyleSheet, Image } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import listingsData from "../../assets/data/airbnb-listings.json";
+import Animated from "react-native-reanimated";
 
 const Page = () => {
   const { id } = useLocalSearchParams<{ id: string }>();
@@ -10,9 +11,9 @@ const Page = () => {
   );
   return (
     <View style={styles.container}>
-      <ScrollView>
-        <Image source={{ uri: listing.xl_picture_url}} height={200} />
-      </ScrollView>
+      <Animated.ScrollView>
+        <Animated.Image source={{ uri: listing.xl_picture_url}} height={200} />
+      </Animated.ScrollView>
     </View>
   );
 };
