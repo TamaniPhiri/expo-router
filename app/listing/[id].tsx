@@ -86,7 +86,7 @@ const Page = () => {
           K {listing.price} / night
         </Text>
         <TouchableOpacity
-          style={{ backgroundColor: Colors.orange, padding: 12 ,borderRadius:10}}
+          style={{ backgroundColor: Colors.orange, padding: 12 ,borderRadius:6}}
         >
           <Text style={{ color: "white", fontFamily: "mon-b" }}>Reserve</Text>
         </TouchableOpacity>
