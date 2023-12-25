@@ -11,8 +11,8 @@ const Page = () => {
   );
   const textAnimationConfig = {
     ...FadeInLeft,
-    delay: 500, 
-  }
+    delay: 500,
+  };
   return (
     <View style={styles.container}>
       <Animated.ScrollView>
@@ -22,7 +22,9 @@ const Page = () => {
           style={styles.image}
         />
         <View>
-          <Animated.Text entering={FadeInLeft.delay(400)}>{listing.name}</Animated.Text>
+          <Animated.Text entering={FadeInLeft.delay(400)}>
+            {listing.name}
+          </Animated.Text>
         </View>
       </Animated.ScrollView>
     </View>
