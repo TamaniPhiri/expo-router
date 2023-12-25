@@ -65,7 +65,7 @@ const Page = () => {
               borderTopWidth:0.5,
               borderBottomWidth:0.5,
               borderColor:"gray",
-              paddingVertical:12
+              paddingVertical:6
             }}
           >
             <Image
