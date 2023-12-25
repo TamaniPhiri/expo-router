@@ -83,15 +83,7 @@ const Page = () => {
           </Text>
         </View>
       </Animated.ScrollView>
-      <Animated.View
-        entering={SlideInUp.delay(600)}
-        style={{
-          padding: 24,
-          borderTopWidth: 0.2,
-          borderColor: Colors.yellow,
-          alignItems: "center",
-        }}
-      >
+      <Animated.View entering={SlideInUp.delay(600)} style={styles.footer}>
         <Text>K {listing.price} night</Text>
         <TouchableOpacity></TouchableOpacity>
       </Animated.View>
@@ -151,5 +143,11 @@ const styles = StyleSheet.create({
     borderBottomWidth: 0.2,
     borderColor: Colors.yellow,
     paddingVertical: 12,
+  },
+  footer: {
+    padding: 24,
+    borderTopWidth: 0.2,
+    borderColor: Colors.yellow,
+    alignItems: "center",
   },
 });
