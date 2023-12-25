@@ -85,9 +85,7 @@ const Page = () => {
         <Text style={{ color: "white", fontFamily: "mon-b" }}>
           K {listing.price} / night
         </Text>
-        <TouchableOpacity
-          style={{ backgroundColor: Colors.orange, padding: 12 ,borderRadius:6}}
-        >
+        <TouchableOpacity style={styles.reserveBtn}>
           <Text style={{ color: "white", fontFamily: "mon-b" }}>Reserve</Text>
         </TouchableOpacity>
       </Animated.View>
@@ -160,5 +158,10 @@ const styles = StyleSheet.create({
     color: "white",
     paddingTop: 12,
     fontFamily: "mon",
+  },
+  reserveBtn: {
+    backgroundColor: Colors.orange,
+    padding: 12,
+    borderRadius: 6,
   },
 });
