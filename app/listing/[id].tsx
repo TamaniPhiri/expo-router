@@ -18,6 +18,7 @@ import Animated, {
 import { AntDesign, Feather, FontAwesome, Ionicons } from "@expo/vector-icons";
 import Colors from "../../constants/Colors";
 import { useLayoutEffect } from "react";
+import AirbnbListing from "../../types/interface";
 
 const { width } = Dimensions.get("window");
 const Page = () => {
