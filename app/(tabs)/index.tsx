@@ -20,8 +20,8 @@ const Page = () => {
           header: () => <ExploreHeader onCategoryChange={onDataChanged} />,
         }}
       />
-      <Listings listings={items} category={category} />
-      {/* <ListingsMap listings={listingsDataGeo as any} /> */}
+      {/* <Listings listings={items} category={category} /> */}
+      <ListingsMap listings={listingsDataGeo as any} />
     </View>
   );
 };
