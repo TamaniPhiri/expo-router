@@ -97,5 +97,6 @@ const styles = StyleSheet.create({
   metricText: {
     fontSize: 32,
     color: "#a3a3a3",
+    fontFamily:"mon-b"
   },
 });
