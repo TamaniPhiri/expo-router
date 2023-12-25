@@ -70,7 +70,7 @@ const Page = () => {
               </Text>
             </View>
           </View>
-          <Text style={{ color: "white", marginTop: 12 }}>
+          <Text style={{ color: "white", marginTop: 12 ,fontFamily:"mon"}}>
             {listing.description}
           </Text>
         </View>
