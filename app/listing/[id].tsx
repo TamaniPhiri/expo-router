@@ -7,6 +7,7 @@ import Animated, {
   ZoomInUp,
 } from "react-native-reanimated";
 import { Feather, FontAwesome, Ionicons } from "@expo/vector-icons";
+import Colors from "../../constants/Colors";
 
 const { width } = Dimensions.get("window");
 const Page = () => {
@@ -41,15 +42,15 @@ const Page = () => {
             style={styles.metricContainer}
           >
             <View style={styles.metricCard}>
-              <Feather name="users" size={24} />
+              <Feather name="users" size={24} color={Colors.orange} />
               <Text>{listing.guests_included}</Text>
             </View>
             <View style={styles.metricCard}>
-              <Ionicons name="bed-outline" size={24} color="black" />
+              <Ionicons name="bed-outline" size={24} color={Colors.orange} />
               <Text>{listing.bedrooms}</Text>
             </View>
             <View style={styles.metricCard}>
-              <FontAwesome name="bath" size={24} color="black" />
+              <FontAwesome name="bath" size={24} color={Colors.orange} />
               <Text>{listing.bathrooms}</Text>
             </View>
           </Animated.View>
@@ -90,7 +91,7 @@ const styles = StyleSheet.create({
   },
   location: {
     marginVertical: 12,
-    fontFamily:"mon",
-    color:"#e5e5e5"
+    fontFamily: "mon",
+    color: "#e5e5e5",
   },
 });
