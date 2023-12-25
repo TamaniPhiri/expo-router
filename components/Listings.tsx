@@ -87,6 +87,7 @@ const Listings = ({ listings, category }: Props) => {
         ref={listRef}
         data={loading ? [] : listings}
         renderItem={renderRow}
+        maxToRenderPerBatch={10}
       />
     </View>
   );
