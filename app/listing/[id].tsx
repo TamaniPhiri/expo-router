@@ -41,19 +41,26 @@ const Page = () => {
   useLayoutEffect(() => {
     navigation.setOptions({
       headerRight: () => (
-        <View style={{ flexDirection: "row", gap: 12 ,alignItems:"center"}}>
+        <View style={{ flexDirection: "row", gap: 12, alignItems: "center" }}>
           <TouchableOpacity
             style={{ backgroundColor: "white", borderRadius: 30, padding: 6 }}
             onPress={shareListing}
           >
-            <Ionicons name="share-outline" size={24} />
+            <Ionicons name="share-outline" size={22} />
           </TouchableOpacity>
           <TouchableOpacity
             style={{ backgroundColor: "white", borderRadius: 30, padding: 6 }}
           >
-            <Ionicons name="heart-outline" size={24} />
+            <Ionicons name="heart-outline" size={22} />
           </TouchableOpacity>
         </View>
+      ),
+      headerLeft: () => (
+        <TouchableOpacity
+          style={{ backgroundColor: "white", borderRadius: 30, padding: 6 }}
+        >
+          <Ionicons name="chevron-back" size={22} />
+        </TouchableOpacity>
       ),
     });
   }, []);
