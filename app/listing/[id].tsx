@@ -55,7 +55,9 @@ const Page = () => {
             </View>
             <View style={styles.metricCard}>
               <AntDesign name="staro" size={24} color={Colors.orange} />
-              <Text style={styles.metricText}>{listing.review_scores_rating/20}</Text>
+              <Text style={styles.metricText}>
+                {listing.review_scores_rating / 20}
+              </Text>
             </View>
           </Animated.View>
         </View>
@@ -101,6 +103,6 @@ const styles = StyleSheet.create({
   metricText: {
     fontSize: 24,
     color: "#fff",
-    fontFamily:"mon-b"
+    fontFamily: "mon-b",
   },
 });
