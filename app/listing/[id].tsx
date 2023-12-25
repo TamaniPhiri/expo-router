@@ -20,15 +20,23 @@ import { useLayoutEffect } from "react";
 
 const { width } = Dimensions.get("window");
 const Page = () => {
-  const navigation=useNavigation();
+  const navigation = useNavigation();
   const { id } = useLocalSearchParams<{ id: string }>();
   const listing: AirbnbListing = (listingsData as any[]).find(
     (item: AirbnbListing) => item.id === id
   );
 
-  useLayoutEffect(()=>{
-
-  },[])
+  useLayoutEffect(() => {
+    navigation.setOptions({
+      headerRight: () => (
+        <View>
+          <TouchableOpacity>
+            <Ionicons name="share-outline" />
+          </TouchableOpacity>
+        </View>
+      ),
+    });
+  }, []);
   return (
     <View style={styles.container}>
       <Animated.ScrollView>
@@ -87,7 +95,10 @@ const Page = () => {
           <Text style={styles.description}>{listing.description}</Text>
         </View>
       </Animated.ScrollView>
-      <Animated.View entering={SlideInDown.delay(800).duration(800)} style={styles.footer}>
+      <Animated.View
+        entering={SlideInDown.delay(800).duration(800)}
+        style={styles.footer}
+      >
         <Text style={{ color: "white", fontFamily: "mon-b" }}>
           K {listing.price} / night
         </Text>
