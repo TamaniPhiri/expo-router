@@ -83,7 +83,7 @@ const Page = () => {
               source={{ uri: listing.host_picture_url }}
               width={48}
               height={48}
-              style={{ borderRadius: 30, backgroundColor: Colors.yellow }}
+              style={{ borderRadius: 30, backgroundColor: Colors.orange }}
             />
             <View>
               <Text style={styles.hostText}>{listing.host_name}</Text>
