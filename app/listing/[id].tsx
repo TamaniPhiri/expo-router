@@ -6,6 +6,7 @@ import {
   Dimensions,
   Image,
   TouchableOpacity,
+  Share,
 } from "react-native";
 import listingsData from "../../assets/data/airbnb-listings.json";
 import Animated, {
@@ -25,6 +26,17 @@ const Page = () => {
   const listing: AirbnbListing = (listingsData as any[]).find(
     (item: AirbnbListing) => item.id === id
   );
+
+  const shareListing = async () => {
+    try {
+      await Share.share({
+        title: listing.name,
+        url: listing.listing_url,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   useLayoutEffect(() => {
     navigation.setOptions({
