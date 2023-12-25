@@ -1,5 +1,5 @@
 import { useLocalSearchParams } from "expo-router";
-import { View, Text, StyleSheet, Dimensions } from "react-native";
+import { View, Text, StyleSheet, Dimensions, Image } from "react-native";
 import listingsData from "../../assets/data/airbnb-listings.json";
 import Animated, {
   FadeInLeft,
@@ -56,6 +56,14 @@ const Page = () => {
               </Text>
             </View>
           </Animated.View>
+          <View style={{ flexDirection: "row", marginTop: 12 }}>
+            <Image
+              source={{ uri: listing.host_picture_url }}
+              width={32}
+              height={32}
+              style={{ borderRadius: 30 }}
+            />
+          </View>
         </View>
       </Animated.ScrollView>
     </View>
