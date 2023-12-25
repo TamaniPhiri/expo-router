@@ -15,10 +15,6 @@ const Page = () => {
   const listing: AirbnbListing = (listingsData as any[]).find(
     (item: AirbnbListing) => item.id === id
   );
-  const textAnimationConfig = {
-    ...FadeInLeft,
-    delay: 500,
-  };
   return (
     <View style={styles.container}>
       <Animated.ScrollView>
