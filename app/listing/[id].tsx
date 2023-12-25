@@ -70,11 +70,17 @@ const Page = () => {
               </Text>
             </View>
           </View>
-          <Text style={{ color: "white", marginTop: 12 ,fontFamily:"mon"}}>
+          <Text style={{ color: "white", paddingTop: 12, fontFamily: "mon" }}>
             {listing.description}
           </Text>
         </View>
       </Animated.ScrollView>
+      <View style={{ padding: 24 ,borderTopWidth:0.2,borderColor:Colors.yellow}}>
+        <View>
+          <Text>K {listing.price} night</Text>
+          <Text>{}</Text>
+        </View>
+      </View>
     </View>
   );
 };
