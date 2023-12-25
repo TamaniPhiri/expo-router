@@ -17,12 +17,12 @@ const Page = () => {
     <View style={styles.container}>
       <Animated.ScrollView>
         <Animated.Image
-          entering={ZoomInUp}
+          entering={ZoomInUp.duration(300)}
           source={{ uri: listing.xl_picture_url }}
           style={styles.image}
         />
         <View>
-          <Animated.Text entering={FadeInLeft.delay(400)}>
+          <Animated.Text entering={FadeInLeft.delay(400).duration(500)}>
             {listing.name}
           </Animated.Text>
         </View>
