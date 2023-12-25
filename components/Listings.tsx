@@ -12,6 +12,7 @@ import {
   ActivityIndicator,
 } from "react-native";
 import Colors from "../constants/Colors";
+import Animated, { FadeInRight, FadeOutLeft } from "react-native-reanimated";
 interface Props {
   listings: any;
   category: string;
@@ -30,7 +31,7 @@ const Listings = ({ listings, category }: Props) => {
   const renderRow: ListRenderItem<AirbnbListing> = ({ item }) => (
     <Link href={`/listing/${item.id}`} asChild>
       <TouchableOpacity style={styles.card}>
-        <View>
+        <Animated.View entering={FadeInRight} exiting={FadeOutLeft}>
           <Image source={{ uri: item.medium_url }} style={styles.cardImage} />
           <TouchableOpacity
             style={{ position: "absolute", right: 20, top: 20, zIndex: 1 }}
@@ -69,7 +70,7 @@ const Listings = ({ listings, category }: Props) => {
             </Text>
             <Text style={{ fontFamily: "mon", color: "#e5e5e5" }}>night</Text>
           </View>
-        </View>
+        </Animated.View>
       </TouchableOpacity>
     </Link>
   );
