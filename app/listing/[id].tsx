@@ -48,6 +48,11 @@ const Page = () => {
           >
             <Ionicons name="share-outline" size={24} />
           </TouchableOpacity>
+          <TouchableOpacity
+            style={{ backgroundColor: "white", borderRadius: 30, padding: 6 }}
+          >
+            <Ionicons name="heart-outline" size={24} />
+          </TouchableOpacity>
         </View>
       ),
     });
