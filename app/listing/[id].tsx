@@ -59,8 +59,8 @@ const Page = () => {
           <View style={{ flexDirection: "row", marginTop: 12 }}>
             <Image
               source={{ uri: listing.host_picture_url }}
-              width={32}
-              height={32}
+              width={48}
+              height={48}
               style={{ borderRadius: 30 }}
             />
           </View>
