@@ -12,7 +12,7 @@ import Animated, {
   FadeInLeft,
   FadeInDown,
   ZoomInUp,
-  SlideInUp,
+  SlideInDown,
 } from "react-native-reanimated";
 import { AntDesign, Feather, FontAwesome, Ionicons } from "@expo/vector-icons";
 import Colors from "../../constants/Colors";
@@ -81,7 +81,7 @@ const Page = () => {
           <Text style={styles.description}>{listing.description}</Text>
         </View>
       </Animated.ScrollView>
-      <Animated.View entering={SlideInUp.delay(600)} style={styles.footer}>
+      <Animated.View entering={SlideInDown.delay(600)} style={styles.footer}>
         <Text style={{ color: "white", fontFamily: "mon-b" }}>
           K {listing.price} / night
         </Text>
