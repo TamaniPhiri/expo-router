@@ -90,6 +90,7 @@ const Listings = ({ listings, category }: Props) => {
         maxToRenderPerBatch={10}
         removeClippedSubviews={true}
         updateCellsBatchingPeriod={200}
+        initialNumToRender={10}
       />
     </View>
   );
