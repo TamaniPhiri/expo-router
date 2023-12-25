@@ -44,6 +44,7 @@ const Page = () => {
         <View>
           <TouchableOpacity
             style={{ backgroundColor: "white", borderRadius: 30, padding: 6 }}
+            onPress={shareListing}
           >
             <Ionicons name="share-outline" size={24} />
           </TouchableOpacity>
