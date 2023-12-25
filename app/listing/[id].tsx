@@ -6,7 +6,7 @@ import Animated, {
   FadeInDown,
   ZoomInUp,
 } from "react-native-reanimated";
-import { Feather, FontAwesome, Ionicons } from "@expo/vector-icons";
+import { AntDesign, Feather, FontAwesome, Ionicons } from "@expo/vector-icons";
 import Colors from "../../constants/Colors";
 
 const { width } = Dimensions.get("window");
@@ -52,6 +52,10 @@ const Page = () => {
             <View style={styles.metricCard}>
               <FontAwesome name="bath" size={24} color={Colors.orange} />
               <Text style={styles.metricText}>{listing.bathrooms}</Text>
+            </View>
+            <View style={styles.metricCard}>
+              <AntDesign name="staro" size={24} color={Colors.orange} />
+              <Text style={styles.metricText}>{listing.review_scores_rating/20}</Text>
             </View>
           </Animated.View>
         </View>
