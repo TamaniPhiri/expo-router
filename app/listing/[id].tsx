@@ -41,7 +41,7 @@ const Page = () => {
   useLayoutEffect(() => {
     navigation.setOptions({
       headerRight: () => (
-        <View>
+        <View style={{ flexDirection: "row", gap: 12 }}>
           <TouchableOpacity
             style={{ backgroundColor: "white", borderRadius: 30, padding: 6 }}
             onPress={shareListing}
