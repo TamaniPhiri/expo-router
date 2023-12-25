@@ -38,7 +38,7 @@ const Page = () => {
               <Text>{listing.guests_included}</Text>
             </View>
             <View>
-              <Ionicons name="md-bed-outline" size={24} color="black" />
+              <Ionicons name="bed-outline" size={24} color="black" />
               <Text>{listing.bedrooms}</Text>
             </View>
           </Animated.View>
