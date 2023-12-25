@@ -62,6 +62,10 @@ const Page = () => {
               marginTop: 12,
               alignItems: "center",
               gap: 12,
+              borderTopWidth:0.5,
+              borderBottomWidth:0.5,
+              borderColor:"gray",
+              paddingVertical:12
             }}
           >
             <Image
@@ -71,8 +75,8 @@ const Page = () => {
               style={{ borderRadius: 30, backgroundColor: Colors.yellow }}
             />
             <View>
-              <Text>{listing.host_name}</Text>
-              <Text>Host since {listing.host_since}</Text>
+              <Text style={styles.hostText}>{listing.host_name}</Text>
+              <Text style={styles.hostText}>Host since {listing.host_since}</Text>
             </View>
           </View>
         </View>
@@ -120,4 +124,8 @@ const styles = StyleSheet.create({
     color: "#fff",
     fontFamily: "mon-b",
   },
+  hostText:{
+    color:"#e5e5e5",
+    fontFamily:"mon"
+  }
 });
