@@ -47,7 +47,7 @@ const Page = () => {
             </View>
             <View style={styles.metricCard}>
               <Ionicons name="bed-outline" size={24} color={Colors.orange} />
-              <Text>{listing.bedrooms}</Text>
+              <Text style={styles.metricText}>{listing.bedrooms}</Text>
             </View>
             <View style={styles.metricCard}>
               <FontAwesome name="bath" size={24} color={Colors.orange} />
