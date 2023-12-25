@@ -62,8 +62,8 @@ const Page = () => {
               marginTop: 12,
               alignItems: "center",
               gap: 12,
-              borderTopWidth:0.5,
-              borderBottomWidth:0.5,
+              borderTopWidth:0.2,
+              borderBottomWidth:0.2,
               borderColor:"gray",
               paddingVertical:6
             }}
