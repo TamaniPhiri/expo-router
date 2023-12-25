@@ -64,7 +64,7 @@ const Page = () => {
               gap: 12,
               borderTopWidth:0.2,
               borderBottomWidth:0.2,
-              borderColor:"gray",
+              borderColor:Colors.yellow,
               paddingVertical:6
             }}
           >
