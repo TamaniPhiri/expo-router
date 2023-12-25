@@ -70,7 +70,9 @@ const Page = () => {
               </Text>
             </View>
           </View>
-          <Text style={{color:"white"}}>{listing.description}</Text>
+          <Text style={{ color: "white", marginTop: 8 }}>
+            {listing.description}
+          </Text>
         </View>
       </Animated.ScrollView>
     </View>
