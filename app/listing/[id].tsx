@@ -32,7 +32,7 @@ const Page = () => {
           <Text>
             {listing.room_type} in {listing.smart_location}
           </Text>
-          <Animated.View style={{ borderColor: "gray", borderWidth: 0.5 ,flexDirection:"row",justifyContent:"space-evenly"}}>
+          <Animated.View style={styles.metricContainer}>
             <View style={styles.metricCard}>
               <Feather name="users" size={24} />
               <Text>{listing.guests_included}</Text>
@@ -71,6 +71,14 @@ const styles = StyleSheet.create({
     padding: 24,
   },
   metricCard: {
-    alignItems:"center"
+    alignItems: "center",
+  },
+  metricContainer: {
+    borderColor: "gray",
+    borderWidth: 0.5,
+    flexDirection: "row",
+    justifyContent: "space-evenly",
+    padding:8,
+    borderRadius:10
   },
 });
