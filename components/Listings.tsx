@@ -89,6 +89,7 @@ const Listings = ({ listings, category }: Props) => {
         renderItem={renderRow}
         maxToRenderPerBatch={10}
         removeClippedSubviews={true}
+        updateCellsBatchingPeriod={200}
       />
     </View>
   );
