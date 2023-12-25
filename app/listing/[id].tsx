@@ -51,7 +51,7 @@ const Page = () => {
             </View>
             <View style={styles.metricCard}>
               <FontAwesome name="bath" size={24} color={Colors.orange} />
-              <Text>{listing.bathrooms}</Text>
+              <Text style={styles.metricText}>{listing.bathrooms}</Text>
             </View>
           </Animated.View>
         </View>
