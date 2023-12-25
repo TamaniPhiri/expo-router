@@ -1,7 +1,7 @@
 import { useLocalSearchParams } from "expo-router";
 import { View, Text, StyleSheet, Dimensions } from "react-native";
 import listingsData from "../../assets/data/airbnb-listings.json";
-import Animated, { ZoomInUp} from "react-native-reanimated";
+import Animated, { FadeInLeft, ZoomInUp } from "react-native-reanimated";
 
 const { width } = Dimensions.get("window");
 const Page = () => {
@@ -9,6 +9,10 @@ const Page = () => {
   const listing: AirbnbListing = (listingsData as any[]).find(
     (item: AirbnbListing) => item.id === id
   );
+  const textAnimationConfig = {
+    ...FadeInLeft,
+    delay: 500, 
+  }
   return (
     <View style={styles.container}>
       <Animated.ScrollView>
@@ -17,6 +21,9 @@ const Page = () => {
           source={{ uri: listing.xl_picture_url }}
           style={styles.image}
         />
+        <View>
+          <Animated.Text entering={FadeInLeft.delay(400)}>{listing.name}</Animated.Text>
+        </View>
       </Animated.ScrollView>
     </View>
   );
