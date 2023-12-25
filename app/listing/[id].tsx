@@ -1,10 +1,18 @@
 import { useLocalSearchParams } from "expo-router";
-import { View, Text, StyleSheet, Dimensions, Image } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  Dimensions,
+  Image,
+  TouchableOpacity,
+} from "react-native";
 import listingsData from "../../assets/data/airbnb-listings.json";
 import Animated, {
   FadeInLeft,
   FadeInDown,
   ZoomInUp,
+  SlideInUp,
 } from "react-native-reanimated";
 import { AntDesign, Feather, FontAwesome, Ionicons } from "@expo/vector-icons";
 import Colors from "../../constants/Colors";
@@ -75,12 +83,18 @@ const Page = () => {
           </Text>
         </View>
       </Animated.ScrollView>
-      <View style={{ padding: 24 ,borderTopWidth:0.2,borderColor:Colors.yellow}}>
-        <View>
-          <Text>K {listing.price} night</Text>
-          <Text>{}</Text>
-        </View>
-      </View>
+      <Animated.View
+        entering={SlideInUp.delay(600)}
+        style={{
+          padding: 24,
+          borderTopWidth: 0.2,
+          borderColor: Colors.yellow,
+          alignItems: "center",
+        }}
+      >
+        <Text>K {listing.price} night</Text>
+        <TouchableOpacity></TouchableOpacity>
+      </Animated.View>
     </View>
   );
 };
