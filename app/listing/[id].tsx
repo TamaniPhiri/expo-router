@@ -43,7 +43,7 @@ const Page = () => {
           >
             <View style={styles.metricCard}>
               <Feather name="users" size={24} color={Colors.orange} />
-              <Text>{listing.guests_included}</Text>
+              <Text style={styles.metricText}>{listing.guests_included}</Text>
             </View>
             <View style={styles.metricCard}>
               <Ionicons name="bed-outline" size={24} color={Colors.orange} />
@@ -94,4 +94,7 @@ const styles = StyleSheet.create({
     fontFamily: "mon",
     color: "#e5e5e5",
   },
+  metricText:{
+    fontSize:32
+  }
 });
