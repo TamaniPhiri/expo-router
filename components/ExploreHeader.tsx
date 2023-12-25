@@ -61,7 +61,7 @@ const ExploreHeader = ({ onCategoryChange }: Props) => {
                   Where to?
                 </Text>
                 <Text style={{ fontFamily: "mon", color: "#a3a3a3" }}>
-                  Anywhere - Any week - Add guests
+                  Anywhere · Any week · Add guests
                 </Text>
               </View>
             </TouchableOpacity>

@@ -25,7 +25,7 @@ const Listings = ({ listings, category }: Props) => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 500);
+    }, 300);
   }, [category]);
 
   const renderRow: ListRenderItem<AirbnbListing> = ({ item }) => (
