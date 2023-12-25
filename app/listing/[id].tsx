@@ -56,18 +56,7 @@ const Page = () => {
               </Text>
             </View>
           </Animated.View>
-          <View
-            style={{
-              flexDirection: "row",
-              marginTop: 12,
-              alignItems: "center",
-              gap: 12,
-              borderTopWidth:0.2,
-              borderBottomWidth:0.2,
-              borderColor:Colors.yellow,
-              paddingVertical:6
-            }}
-          >
+          <View style={styles.hostCard}>
             <Image
               source={{ uri: listing.host_picture_url }}
               width={48}
@@ -76,7 +65,9 @@ const Page = () => {
             />
             <View>
               <Text style={styles.hostText}>{listing.host_name}</Text>
-              <Text style={styles.hostText}>Host since {listing.host_since}</Text>
+              <Text style={styles.hostText}>
+                Host since {listing.host_since}
+              </Text>
             </View>
           </View>
         </View>
@@ -124,8 +115,18 @@ const styles = StyleSheet.create({
     color: "#fff",
     fontFamily: "mon-b",
   },
-  hostText:{
-    color:"#e5e5e5",
-    fontFamily:"mon"
-  }
+  hostText: {
+    color: "#e5e5e5",
+    fontFamily: "mon",
+  },
+  hostCard: {
+    flexDirection: "row",
+    marginTop: 12,
+    alignItems: "center",
+    gap: 12,
+    borderTopWidth: 0.2,
+    borderBottomWidth: 0.2,
+    borderColor: Colors.yellow,
+    paddingVertical: 12,
+  },
 });
