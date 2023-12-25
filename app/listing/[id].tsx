@@ -33,7 +33,7 @@ const Page = () => {
           >
             {listing.name}
           </Animated.Text>
-          <Text>
+          <Text style={styles.location}>
             {listing.room_type} in {listing.smart_location}
           </Text>
           <Animated.View
@@ -87,5 +87,8 @@ const styles = StyleSheet.create({
     justifyContent: "space-evenly",
     padding: 8,
     borderRadius: 10,
+  },
+  location: {
+    marginVertical: 4,
   },
 });
