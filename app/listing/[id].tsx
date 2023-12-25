@@ -70,6 +70,7 @@ const Page = () => {
               </Text>
             </View>
           </View>
+          <Text>{listing.description}</Text>
         </View>
       </Animated.ScrollView>
     </View>
