@@ -58,6 +58,7 @@ const Page = () => {
       headerLeft: () => (
         <TouchableOpacity
           style={{ backgroundColor: "white", borderRadius: 30, padding: 6 }}
+          onPress={()=>navigation.goBack()}
         >
           <Ionicons name="chevron-back" size={22} />
         </TouchableOpacity>
