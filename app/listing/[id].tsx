@@ -31,9 +31,9 @@ const Page = () => {
       headerRight: () => (
         <View>
           <TouchableOpacity
-            style={{ backgroundColor: "white", borderRadius: 30 }}
+            style={{ backgroundColor: "white", borderRadius: 30, padding: 6 }}
           >
-            <Ionicons name="share-outline" />
+            <Ionicons name="share-outline" size={24} />
           </TouchableOpacity>
         </View>
       ),
