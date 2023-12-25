@@ -83,7 +83,7 @@ const Page = () => {
       </Animated.ScrollView>
       <Animated.View entering={SlideInUp.delay(600)} style={styles.footer}>
         <Text>K {listing.price} night</Text>
-        <TouchableOpacity style>
+        <TouchableOpacity style={{}}>
           <Text>Reserve</Text>
         </TouchableOpacity>
       </Animated.View>
@@ -149,6 +149,8 @@ const styles = StyleSheet.create({
     borderTopWidth: 0.2,
     borderColor: Colors.yellow,
     alignItems: "center",
+    flexDirection:"row",
+    justifyContent:"space-between"
   },
   description: {
     color: "white",
